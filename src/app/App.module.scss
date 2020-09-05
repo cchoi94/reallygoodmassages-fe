@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #2b2b2b;
+}
+
+body {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  p {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  font-size: 16px;
+}
