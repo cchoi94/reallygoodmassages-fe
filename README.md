@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Main
+
+A React-Typescript boiler with Redux, Thunk, Routes, Axios, Reselect, Lodash
+
 ## Available Scripts
 
 In the project directory, you can run:
