@@ -68,6 +68,12 @@ function anaaddEvent(id, relationId) {
         window.parent.location.href = anaconfig[id].url;
       } else if (anaconfig[id].target === 'modal') {
         $(anaconfig[id].url).modal('show');
+      } else if (anaconfig[id].target === 'zoom') {
+        $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
+          transition: '1s',
+          transform: 'scale(' + 4 + ')', // set zoom
+          transformOrigin: anaconfig[id].position, // set transform scale base
+        });
       }
     });
     _obj.mousemove(function(e) {
@@ -114,6 +120,12 @@ function anaaddEvent(id, relationId) {
           window.parent.location.href = anaconfig[id].url;
         } else if (anaconfig[id].target === 'modal') {
           $(anaconfig[id].url).modal('show');
+        } else if (anaconfig[id].target === 'zoom') {
+          $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
+            transition: '1s',
+            transform: 'scale(' + 4 + ')', // set zoom
+            transformOrigin: anaconfig[id].position, // set transform scale base
+          });
         }
       });
     }
