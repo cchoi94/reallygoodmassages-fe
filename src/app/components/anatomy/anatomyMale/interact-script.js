@@ -18,6 +18,7 @@ $(document).ready(function() {
     $('#baseb')
       .show()
       .animate({ opacity: '1' }, 100);
+    $('#anatomyBackgroundText')[0].innerText = 'BACK';
   });
   $('.goa').on('click', function() {
     $('#baseb')
@@ -26,6 +27,7 @@ $(document).ready(function() {
     $('#basea')
       .show()
       .animate({ opacity: '1' }, 100);
+    $('#anatomyBackgroundText')[0].innerText = 'FRONT';
   });
 });
 $(function() {
@@ -70,9 +72,21 @@ function anaaddEvent(id, relationId) {
         $(anaconfig[id].url).modal('show');
       } else if (anaconfig[id].target === 'zoom') {
         $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
-          transition: '1s',
-          transform: 'scale(' + 4 + ')', // set zoom
+          transform: 'scale(' + 5 + ')', // set zoom
           transformOrigin: anaconfig[id].position, // set transform scale base
+          transition: '1s',
+        });
+        $('body').css({
+          overflow: 'hidden',
+        });
+        $('#anatomyBackBtn').css({
+          display: 'block',
+        });
+        $('#sideDescription').css({
+          display: 'none',
+        });
+        $('#anatomyBackgroundText').css({
+          display: 'none',
         });
       }
     });

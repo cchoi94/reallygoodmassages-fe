@@ -1,6 +1,8 @@
 import React from 'react';
 import { AnatomyMale } from 'app/components/anatomy/anatomyMale/anatomyMale';
 
+import cls from './home.module.scss';
+
 export const Home: React.FC = () => {
   return (
     <>
