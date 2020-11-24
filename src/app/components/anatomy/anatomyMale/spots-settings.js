@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 /*============================================================================================*/
 /*===== In the following section you can add/remove/modify the spots of the front side =======*/
 /*============================================================================================*/
@@ -26,7 +27,7 @@ var spotsconfiga = {
       outline: '#FF0000',
       upColor: 'rgba(255, 0, 0, 0.3)',
       overColor: 'rgba(255, 0, 0, 0.7)',
-      url: 'https://www.humananatomyillustrations.com/',
+      url: 'https://google.ca',
       target: 'same_window',
       enabled: true,
     },
@@ -92,7 +93,9 @@ $(function() {
       svg_circle.setAttributeNS(null, 'stroke', spotsconfiga.pins[i].outline);
       svg_circle.setAttributeNS(null, 'stroke-width', 1);
       svg_circle.setAttributeNS(null, 'id', 'anaspotsa_' + i);
-      tsvg_obj.appendChild(svg_circle);
+      if (tsvg_obj) {
+        tsvg_obj.appendChild(svg_circle);
+      }
       anaspotsaAddEvent(i);
     }
   }
@@ -186,7 +189,9 @@ $(function() {
       svg_circle.setAttributeNS(null, 'stroke', spotsconfigb.pins[i].outline);
       svg_circle.setAttributeNS(null, 'stroke-width', 1);
       svg_circle.setAttributeNS(null, 'id', 'anaspotsb_' + i);
-      tsvg_obj.appendChild(svg_circle);
+      if (tsvg_obj) {
+        tsvg_obj.appendChild(svg_circle);
+      }
       anaspotsbAddEvent(i);
     }
   }

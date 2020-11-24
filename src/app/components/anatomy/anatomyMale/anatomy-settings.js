@@ -221,7 +221,6 @@ export var anaconfig = {
   ana21: {
     //wrist-rt
     isFrontFacing: true,
-    isFrontFacing: true,
     hover: 'WRIST [RT]',
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
