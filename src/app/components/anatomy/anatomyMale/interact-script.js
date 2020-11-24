@@ -8,6 +8,8 @@ function isTouchEnabled() {
   );
 }
 $(document).ready(function() {
+  $('#anaspotsa').hide();
+  $('#anaspotsb').hide();
   $('#baseb')
     .hide()
     .animate({ opacity: '0' }, 100);
@@ -88,6 +90,7 @@ function anaaddEvent(id, relationId) {
         $('#anatomyBackgroundText').css({
           display: 'none',
         });
+        $('#anaspotsa').show();
       }
     });
     _obj.mousemove(function(e) {

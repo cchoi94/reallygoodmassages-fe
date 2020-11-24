@@ -9,7 +9,7 @@ var spotsconfiga = {
         "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 426, //check the X, Y coordinates guide in the documentation
       pos_Y: 360,
-      size: 50, //size of the pin
+      size: 10, //size of the pin
       outline: '#cc2900', //outline color of the pin
       upColor: '#ff6600', //color of the pin when drawing load
       overColor: '#cc2900', //color of the pin when mouse hover
@@ -22,7 +22,7 @@ var spotsconfiga = {
         "<u><b>Example 'B'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.",
       pos_X: 319,
       pos_Y: 815,
-      size: 40,
+      size: 10,
       outline: '#FF0000',
       upColor: 'rgba(255, 0, 0, 0.3)',
       overColor: 'rgba(255, 0, 0, 0.7)',

@@ -26,6 +26,7 @@ export const useAnatomyMale = () => {
     $('#anatomyBackgroundText').css({
       display: 'block',
     });
+    $('#anaspotsa').hide();
     $('body').css({
       overflow: 'initial',
     });
