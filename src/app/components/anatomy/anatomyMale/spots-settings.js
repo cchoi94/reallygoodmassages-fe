@@ -1,4 +1,5 @@
 import $ from 'jquery';
+/* eslint-disable */
 
 /*============================================================================================*/
 /*===== In the following section you can add/remove/modify the spots of the front side =======*/

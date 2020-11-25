@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { anaconfig } from './anatomy-settings';
+/* eslint-disable */
 function isTouchEnabled() {
   return (
     'ontouchstart' in window ||
