@@ -25,9 +25,11 @@ export const useAnatomyMale = () => {
     $('#anatomyBackgroundText').css({
       display: 'block',
     });
-    $('#homeWrapper').css({
-      border: '4px solid #2992fe',
-    });
+    if ($(window).width() >= 1265) {
+      $('#homeWrapper').css({
+        border: '4px solid #2992fe',
+      });
+    }
     $('#instructions').show();
     $('#navbar').show();
     $('#anaspotsa').hide();
