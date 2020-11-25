@@ -1,6 +1,5 @@
 import React from 'react';
 import { AnatomyMale } from 'app/components/anatomy/anatomyMale/anatomyMale';
-import { NavBar } from 'app/components/navbar/navBar';
 
 import cls from './home.module.scss';
 

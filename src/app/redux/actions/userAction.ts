@@ -1,5 +1,4 @@
 import { Dispatch } from 'redux';
-import axios from '../../requests/axiosInstance';
 
 export enum UserActions {
   GET_USER_INFO = 'GET_USER_INFO',
