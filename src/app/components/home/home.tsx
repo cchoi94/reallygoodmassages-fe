@@ -1,11 +1,12 @@
 import React from 'react';
 import { AnatomyMale } from 'app/components/anatomy/anatomyMale/anatomyMale';
+import classNames from 'classnames';
 
 import cls from './home.module.scss';
 
 export const Home: React.FC = () => {
   return (
-    <div className={'section'}>
+    <div className={classNames('section', cls.section)}>
       <div id='homeWrapper' className={cls.homeWrapper}>
         <AnatomyMale />
         <div id='sideDescription' className={cls.sideDescription}>
@@ -51,7 +52,7 @@ export const Home: React.FC = () => {
                 </li>
               </ul>
               <p className={cls.emoBullet}>
-                <span role='img' aria-label='star'>
+                <span className={cls.starEmo} role='img' aria-label='star'>
                   ⭐️
                 </span>{' '}
                 <p>

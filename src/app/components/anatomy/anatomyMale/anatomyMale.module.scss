@@ -5,12 +5,13 @@
 }
 
 .anatomyWrapper {
-  width: 66%;
+  width: 65%;
   position: relative;
   text-align: center;
 }
 
 .anatomy {
+  display: flex;
   height: 100%;
 }
 

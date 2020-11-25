@@ -1,7 +1,7 @@
 const $ = require('jquery');
 
 const resetStyles = {
-  transform: 'scale(0.6)', // set zoom
+  transform: 'scale(1)', // set zoom
   transformOrigin: '50% 50%', // back to original
 };
 
