@@ -1,14 +1,18 @@
+$gutter: 8px;
+
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 40px 40px;
+  padding: $gutter * 5;
   position: fixed;
   top: 0;
   width: 100%;
+  background: #ffffff;
+  z-index: 10;
 }
 
 .logo {
-  width: 160px;
+  width: $gutter * 20;
   background: blue;
 }
 
@@ -18,6 +22,6 @@
     font-weight: 700;
   }
   a:not(:last-child) {
-    margin-right: 21px;
+    margin-right: $gutter * 3;
   }
 }

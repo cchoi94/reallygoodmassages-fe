@@ -83,6 +83,8 @@ function anaaddEvent(id, relationId) {
           display: 'block',
         });
         $('#anaspotsa').show();
+        $('#instructions').hide();
+        $('#anatomyBackgroundText').hide();
         $('#anatomyWrapper').css({
           overflow: 'hidden',
         });
@@ -142,6 +144,8 @@ function anaaddEvent(id, relationId) {
             display: 'block',
           });
           $('#anaspotsa').show();
+          $('#instructions').hide();
+          $('#anatomyBackgroundText').hide();
           $('#anatomyWrapper').css({
             overflow: 'hidden',
           });
