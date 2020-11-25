@@ -1,3 +1,5 @@
+@import '../../dictionaries/themes/colors/colors.module.scss';
+
 $gutter: 8px;
 
 .container {
@@ -13,7 +15,7 @@ $gutter: 8px;
 
 .logo {
   width: $gutter * 20;
-  background: blue;
+  background: $blue;
 }
 
 .links {

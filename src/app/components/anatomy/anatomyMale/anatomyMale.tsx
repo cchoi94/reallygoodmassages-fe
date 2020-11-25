@@ -1,6 +1,7 @@
 import React from 'react';
 import cls from './anatomyMale.module.scss';
 import { useAnatomyMale } from './useAnatomyMale';
+import classNames from 'classnames';
 
 const anatomyMale = require('../index.html');
 
@@ -8,10 +9,14 @@ export const AnatomyMale: React.FC = () => {
   const { resetZoom } = useAnatomyMale();
   return (
     <>
-      <button id='anatomyBackBtn' className={cls.backBtn} onClick={resetZoom}>
-        Back
-      </button>
       <div id='anatomyWrapper' className={cls.anatomyWrapper}>
+        <button
+          id='anatomyBackBtn'
+          className={classNames('btn btn-secondary', cls.backBtn)}
+          onClick={resetZoom}
+        >
+          <span className={cls.chevron}>{'<'}</span>Back
+        </button>
         <h1 id='anatomyBackgroundText' className={cls.backgroundText}>
           Back
         </h1>
