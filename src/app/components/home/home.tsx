@@ -6,8 +6,7 @@ import cls from './home.module.scss';
 
 export const Home: React.FC = () => {
   return (
-    <div className={cls.section}>
-      <NavBar />
+    <div className={'section'}>
       <div id='homeWrapper' className={cls.homeWrapper}>
         <AnatomyMale />
         <div id='sideDescription' className={cls.sideDescription}>
