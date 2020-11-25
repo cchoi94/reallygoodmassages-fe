@@ -74,29 +74,18 @@ function anaaddEvent(id, relationId) {
       } else if (anaconfig[id].target === 'modal') {
         $(anaconfig[id].url).modal('show');
       } else if (anaconfig[id].target === 'zoom') {
+        const cor = anaconfig[id].position.split(' ');
         $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
-          transform: 'scale(' + 5 + ')', // set zoom
-          transformOrigin: anaconfig[id].position, // set transform scale base
+          transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
           transition: '1s',
-        });
-        $('body').css({
-          overflow: 'hidden',
         });
         $('#anatomyBackBtn').css({
           display: 'block',
         });
-        $('#sideDescription').css({
-          display: 'none',
-        });
-        $('#anatomyBackgroundText').css({
-          display: 'none',
-        });
-        $('#instructions').hide();
-        $('#homeWrapper').css({
-          border: 'none',
-        });
-        $('#navbar').hide();
         $('#anaspotsa').show();
+        $('#anatomyWrapper').css({
+          overflow: 'hidden',
+        });
       }
     });
     _obj.mousemove(function(e) {
@@ -144,24 +133,18 @@ function anaaddEvent(id, relationId) {
         } else if (anaconfig[id].target === 'modal') {
           $(anaconfig[id].url).modal('show');
         } else if (anaconfig[id].target === 'zoom') {
+          const cor = anaconfig[id].position.split(' ');
           $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
-            transform: 'scale(' + 5 + ')', // set zoom
-            transformOrigin: anaconfig[id].position, // set transform scale base
+            transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
             transition: '1s',
-          });
-          $('body').css({
-            overflow: 'hidden',
           });
           $('#anatomyBackBtn').css({
             display: 'block',
           });
-          $('#sideDescription').css({
-            display: 'none',
-          });
-          $('#anatomyBackgroundText').css({
-            display: 'none',
-          });
           $('#anaspotsa').show();
+          $('#anatomyWrapper').css({
+            overflow: 'hidden',
+          });
         }
       });
     }

@@ -11,7 +11,7 @@ export const AnatomyMale: React.FC = () => {
       <button id='anatomyBackBtn' className={cls.backBtn} onClick={resetZoom}>
         Back
       </button>
-      <div className={cls.anatomyWrapper}>
+      <div id='anatomyWrapper' className={cls.anatomyWrapper}>
         <h1 id='anatomyBackgroundText' className={cls.backgroundText}>
           Front
         </h1>
