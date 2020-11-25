@@ -1,7 +1,7 @@
 const $ = require('jquery');
 
 const resetStyles = {
-  transform: 'scale(0.75)', // set zoom
+  transform: 'scale(0.6)', // set zoom
   transformOrigin: '50% 50%', // back to original
 };
 
@@ -25,6 +25,11 @@ export const useAnatomyMale = () => {
     $('#anatomyBackgroundText').css({
       display: 'block',
     });
+    $('#homeWrapper').css({
+      border: '4px solid #2992fe',
+    });
+    $('#instructions').show();
+    $('#navbar').show();
     $('#anaspotsa').hide();
     $('body').css({
       overflow: 'initial',

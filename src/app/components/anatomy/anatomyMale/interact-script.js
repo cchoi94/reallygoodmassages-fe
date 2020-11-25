@@ -90,6 +90,11 @@ function anaaddEvent(id, relationId) {
         $('#anatomyBackgroundText').css({
           display: 'none',
         });
+        $('#instructions').hide();
+        $('#homeWrapper').css({
+          border: 'none',
+        });
+        $('#navbar').hide();
         $('#anaspotsa').show();
       }
     });
@@ -139,10 +144,23 @@ function anaaddEvent(id, relationId) {
           $(anaconfig[id].url).modal('show');
         } else if (anaconfig[id].target === 'zoom') {
           $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
-            transition: '1s',
-            transform: 'scale(' + 4 + ')', // set zoom
+            transform: 'scale(' + 5 + ')', // set zoom
             transformOrigin: anaconfig[id].position, // set transform scale base
+            transition: '1s',
           });
+          $('body').css({
+            overflow: 'hidden',
+          });
+          $('#anatomyBackBtn').css({
+            display: 'block',
+          });
+          $('#sideDescription').css({
+            display: 'none',
+          });
+          $('#anatomyBackgroundText').css({
+            display: 'none',
+          });
+          $('#anaspotsa').show();
         }
       });
     }
