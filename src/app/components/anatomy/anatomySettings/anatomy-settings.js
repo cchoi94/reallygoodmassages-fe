@@ -1,40 +1,8 @@
-const positions = {
-  //front
-  head: '0% 40%',
-  neck: '0% 35%',
-  chest: '0% 25%',
-  abdomen: '0% 10%',
-  pelvis: '0% 0%',
-  shoulderRt: '10% 30%',
-  shoulderLt: '-10% 30%',
-  armRt: '15% 20%',
-  armLt: '-15% 20%',
-  elbowRt: '17.5% 17.5%',
-  elbowLt: '-17.5% 17.5%',
-  forearmRt: '15% 12.5%',
-  forearmLt: '-15% 12.5%',
-  wristRt: '15% 5%',
-  wristLt: '-15% 5%',
-  handRt: '17.5% 0%',
-  handLt: '-17.5% 0%',
-  thighRt: '5% -5%',
-  thighLt: '-5% -5%',
-  kneeRt: '5% -17.5%',
-  kneeLt: '-5% -17.5%',
-  legRt: '5% -30%',
-  legLt: '-5% -30%',
-  ankleRt: '5% -40%',
-  ankleLt: '-5% -40%',
-  footRt: '5% -45%',
-  footLt: '-5% -45%',
-  //back
-  buttocks: '0% 0%',
-  bThighRt: '-5% -10%',
-  bThighLt: '5% -10%',
-};
+import { Positions } from './anatomyPositions';
+
 export var anaconfig = {
   default: {
-    outlineColor: '#ff8080',
+    outlineColor: '',
   },
   /*==============================================================================*/
   /*==============================================================================*/
@@ -48,7 +16,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/', //link to any webpage
     target: 'zoom', // use "new_window", "same_window", "modal" with bootstrap only, or "none"
     enabled: true, //true/false to activate/deactivate
-    position: positions.head,
+    position: Positions.head,
   },
   ana2: {
     //eye-rt
@@ -58,7 +26,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana3: {
     //eye-lt
@@ -66,7 +34,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana4: {
     //ear-rt
@@ -74,7 +42,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana5: {
     //ear-lt
@@ -83,7 +51,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana6: {
     //nose
@@ -92,7 +60,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana7: {
     //mouth
@@ -101,7 +69,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana8: {
     //neck
@@ -110,7 +78,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.neck,
+    position: Positions.neck,
   },
   ana9: {
     //chest
@@ -119,7 +87,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.chest,
+    position: Positions.chest,
   },
   ana10: {
     //abdomen
@@ -128,7 +96,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.abdomen,
+    position: Positions.abdomen,
   },
   ana11: {
     //pelvis
@@ -137,7 +105,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.pelvis,
+    position: Positions.pelvis,
   },
   ana12: {
     //pubis
@@ -146,7 +114,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.pelvis,
+    position: Positions.pelvis,
   },
   ana13: {
     //shoulder-rt
@@ -155,7 +123,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.shoulderRt,
+    position: Positions.shoulderRt,
   },
   ana14: {
     //shoulder-lt
@@ -164,7 +132,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.shoulderLt,
+    position: Positions.shoulderLt,
   },
   ana15: {
     //arm-rt
@@ -173,7 +141,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.armRt,
+    position: Positions.armRt,
   },
   ana16: {
     //arm-lt
@@ -182,7 +150,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.armLt,
+    position: Positions.armLt,
   },
   ana17: {
     //elbow-rt
@@ -191,7 +159,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.elbowRt,
+    position: Positions.elbowRt,
   },
   ana18: {
     //elbow-lt
@@ -200,7 +168,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.elbowLt,
+    position: Positions.elbowLt,
   },
   ana19: {
     //forearm-rt
@@ -209,7 +177,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.forearmRt,
+    position: Positions.forearmRt,
   },
   ana20: {
     //forearm-lt
@@ -218,7 +186,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.forearmLt,
+    position: Positions.forearmLt,
   },
   ana21: {
     //wrist-rt
@@ -227,7 +195,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.wristRt,
+    position: Positions.wristRt,
   },
   ana22: {
     //wrist-lt
@@ -236,7 +204,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.wristLt,
+    position: Positions.wristLt,
   },
   ana23: {
     //hand-rt
@@ -245,7 +213,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.handRt,
+    position: Positions.handRt,
   },
   ana24: {
     //hand-lt
@@ -254,7 +222,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.handLt,
+    position: Positions.handLt,
   },
   ana25: {
     //thigh-rt
@@ -263,7 +231,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.thighRt,
+    position: Positions.thighRt,
   },
   ana26: {
     //thigh-lt
@@ -272,7 +240,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.thighLt,
+    position: Positions.thighLt,
   },
   ana27: {
     //knee-rt
@@ -281,7 +249,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.kneeRt,
+    position: Positions.kneeRt,
   },
   ana28: {
     //knee-lt
@@ -290,7 +258,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.kneeLt,
+    position: Positions.kneeLt,
   },
   ana29: {
     //leg-rt
@@ -299,7 +267,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.legRt,
+    position: Positions.legRt,
   },
   ana30: {
     //leg-lt
@@ -308,7 +276,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.legLt,
+    position: Positions.legLt,
   },
   ana31: {
     //ankle-rt
@@ -317,7 +285,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.ankleRt,
+    position: Positions.ankleRt,
   },
   ana32: {
     //ankle-lt
@@ -326,7 +294,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.ankleLt,
+    position: Positions.ankleLt,
   },
   ana33: {
     //foot-rt
@@ -335,7 +303,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footRt,
+    position: Positions.footRt,
   },
   ana34: {
     //foot-lt
@@ -344,7 +312,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footLt,
+    position: Positions.footLt,
   },
   /*===============================================================================*/
   /*===============================================================================*/
@@ -357,7 +325,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.head,
+    position: Positions.head,
   },
   ana36: {
     //neck-back
@@ -365,7 +333,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.neck,
+    position: Positions.neck,
   },
   ana37: {
     //back
@@ -373,7 +341,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.chest,
+    position: Positions.chest,
   },
   ana38: {
     //loin
@@ -381,7 +349,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.abdomen,
+    position: Positions.abdomen,
   },
   ana39: {
     //buttocks
@@ -389,7 +357,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.buttocks,
+    position: Positions.buttocks,
   },
   ana40: {
     //shoulder-back-rt
@@ -397,7 +365,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.shoulderLt,
+    position: Positions.shoulderLt,
   },
   ana41: {
     //shoulder-back-lt
@@ -405,7 +373,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.shoulderRt,
+    position: Positions.shoulderRt,
   },
   ana42: {
     //arm-back-rt
@@ -413,7 +381,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.armLt,
+    position: Positions.armLt,
   },
   ana43: {
     //arm-back-lt
@@ -421,7 +389,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.armRt,
+    position: Positions.armRt,
   },
   ana44: {
     //elbow-back-rt
@@ -429,7 +397,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.elbowLt,
+    position: Positions.elbowLt,
   },
   ana45: {
     //elbow-back-lt
@@ -437,7 +405,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.elbowRt,
+    position: Positions.elbowRt,
   },
   ana46: {
     //forearm-back-rt
@@ -445,7 +413,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.forearmLt,
+    position: Positions.forearmLt,
   },
   ana47: {
     //forearm-back-lt
@@ -453,7 +421,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.forearmRt,
+    position: Positions.forearmRt,
   },
   ana48: {
     //wrist-back-rt
@@ -461,7 +429,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.wristLt,
+    position: Positions.wristLt,
   },
   ana49: {
     //wrist-back-lt
@@ -469,7 +437,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.wristRt,
+    position: Positions.wristRt,
   },
   ana50: {
     //hand-back-rt
@@ -477,7 +445,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.handLt,
+    position: Positions.handLt,
   },
   ana51: {
     //hand-back-lt
@@ -485,7 +453,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.handRt,
+    position: Positions.handRt,
   },
   ana52: {
     //hamstring-rt
@@ -493,7 +461,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.bThighRt,
+    position: Positions.bThighRt,
   },
   ana53: {
     //hamstring-lt
@@ -501,7 +469,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.bThighLt,
+    position: Positions.bThighLt,
   },
   ana54: {
     //knee-back-rt
@@ -509,7 +477,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.kneeLt,
+    position: Positions.kneeLt,
   },
   ana55: {
     //knee-back-lt
@@ -517,7 +485,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.kneeRt,
+    position: Positions.kneeRt,
   },
   ana56: {
     //calf-rt
@@ -525,7 +493,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.legLt,
+    position: Positions.legLt,
   },
   ana57: {
     //calf-lt
@@ -533,7 +501,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.legRt,
+    position: Positions.legRt,
   },
   ana58: {
     //ankle-back-rt
@@ -541,7 +509,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footLt,
+    position: Positions.footLt,
   },
   ana59: {
     //ankle-back-lt
@@ -549,7 +517,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footRt,
+    position: Positions.footRt,
   },
   ana60: {
     //sole-rt
@@ -557,7 +525,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footLt,
+    position: Positions.footLt,
   },
   ana61: {
     //sole-lt
@@ -565,7 +533,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footRt,
+    position: Positions.footRt,
   },
   ana62: {
     //foot-back-rt
@@ -573,7 +541,7 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footLt,
+    position: Positions.footLt,
   },
   ana63: {
     //foot-back-lt
@@ -581,6 +549,6 @@ export var anaconfig = {
     url: 'https://www.humananatomyillustrations.com/',
     target: 'zoom',
     enabled: true,
-    position: positions.footRt,
+    position: Positions.footRt,
   },
 };

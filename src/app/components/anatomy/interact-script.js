@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { anaconfig } from './anatomy-settings';
+import { anaconfig } from './anatomySettings/anatomy-settings';
 /* eslint-disable */
 function isTouchEnabled() {
   return (
@@ -15,19 +15,19 @@ $(document).ready(function() {
     .hide()
     .animate({ opacity: '0' }, 100);
   $('.gob').on('click', function() {
-    $('#basea')
+    $('#baseb')
       .hide()
       .animate({ opacity: '0' }, 100);
-    $('#baseb')
+    $('#basea')
       .show()
       .animate({ opacity: '1' }, 100);
     $('#anatomyBackgroundText')[0].innerText = 'BACK';
   });
   $('.goa').on('click', function() {
-    $('#baseb')
+    $('#basea')
       .hide()
       .animate({ opacity: '0' }, 100);
-    $('#basea')
+    $('#baseb')
       .show()
       .animate({ opacity: '1' }, 100);
     $('#anatomyBackgroundText')[0].innerText = 'FRONT';
@@ -75,7 +75,7 @@ function anaaddEvent(id, relationId) {
         $(anaconfig[id].url).modal('show');
       } else if (anaconfig[id].target === 'zoom') {
         const cor = anaconfig[id].position.split(' ');
-        $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
+        $(anaconfig[id].isFrontFacing ? '#baseb' : '#basea').css({
           transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
           transition: '1s',
         });
@@ -83,6 +83,7 @@ function anaaddEvent(id, relationId) {
           display: 'block',
         });
         $('#anaspotsa').show();
+        $('#anaspotsb').show();
         $('#instructions').hide();
         $('#anatomyBackgroundText').hide();
         $('#anatomyWrapper').css({

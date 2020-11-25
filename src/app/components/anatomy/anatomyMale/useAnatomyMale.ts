@@ -33,6 +33,7 @@ export const useAnatomyMale = () => {
     $('#instructions').show();
     $('#navbar').show();
     $('#anaspotsa').hide();
+    $('#anaspotsb').hide();
     $('body').css({
       overflow: 'initial',
     });

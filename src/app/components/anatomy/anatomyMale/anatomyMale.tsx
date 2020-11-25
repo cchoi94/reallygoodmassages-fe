@@ -2,7 +2,7 @@ import React from 'react';
 import cls from './anatomyMale.module.scss';
 import { useAnatomyMale } from './useAnatomyMale';
 
-const anatomyMale = require('./index.html');
+const anatomyMale = require('../index.html');
 
 export const AnatomyMale: React.FC = () => {
   const { resetZoom } = useAnatomyMale();
@@ -13,7 +13,7 @@ export const AnatomyMale: React.FC = () => {
       </button>
       <div id='anatomyWrapper' className={cls.anatomyWrapper}>
         <h1 id='anatomyBackgroundText' className={cls.backgroundText}>
-          Front
+          Back
         </h1>
         <div
           className={cls.anatomy}
