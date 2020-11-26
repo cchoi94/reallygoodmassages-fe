@@ -26,13 +26,12 @@ body {
 
 :global(.section) {
   padding: 100px 40px 0 40px;
-  height: calc(100vh - 40px);
 }
 
 :global(.wrapper) {
   display: flex;
   border: $border;
-  height: 100%;
+  height: calc(100vh - 140px);
 }
 
 :global(.sideDescription) {
