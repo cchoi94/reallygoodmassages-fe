@@ -2,6 +2,7 @@ import React from 'react';
 import { useTherapy } from './useTherapy';
 import { GifContainer } from '../commons/gifContainer/gifContainer';
 import classNames from 'classnames';
+import { Path } from 'app/Path';
 
 import cls from './therapy.module.scss';
 
@@ -11,6 +12,13 @@ export const Therapy: React.FC = () => {
     <div className={'section'}>
       <div id='wrapper' className={'wrapper'}>
         <div className={'mainSection'}>
+          {/* ideally want a Link Tag here rather than a, but we need to repload atm for 3p script */}
+          <a
+            href={Path.HOME}
+            className={classNames('btn btn-secondary', cls.backBtn)}
+          >
+            <span className={cls.chevron}>{'<'}</span>Back
+          </a>
           <p className={cls.header}>Try these out.</p>
           <GifContainer link={selectedExercise.gif} />
           <div className={cls.excercisesContainer}>

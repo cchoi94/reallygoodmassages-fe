@@ -34,3 +34,17 @@ $gutter: 8px;
 .activeThumbnail {
   border: 2px solid $blue !important;
 }
+
+.backBtn {
+  position: absolute;
+  z-index: 10;
+  left: 20px;
+  top: 20px;
+  width: 120px;
+  text-decoration: none;
+}
+
+.chevron {
+  color: $blue;
+  margin-right: $gutter/2;
+}

@@ -4,7 +4,7 @@ import { BodyParts } from 'app/dictionaries/bodyParts';
 import { Path } from 'app/Path';
 
 interface ConfigAttributes {
-  hover: string;
+  hover?: string;
   pos_X: number;
   pos_Y: number;
   size: number;
@@ -31,8 +31,6 @@ export const spotsConfigA: Pins = {
   pins: [
     // Left Neck
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 375, //check the X, Y coordinates guide in the documentation
       pos_Y: 180,
       size: 32, //size of the pin
@@ -40,13 +38,11 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: `${Path.THERAPY}?exercises=${TherapyGifs[BodyParts.NECK]}`, //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Right Neck
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 430, //check the X, Y coordinates guide in the documentation
       pos_Y: 210,
       size: 32, //size of the pin
@@ -54,13 +50,11 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: `${Path.THERAPY}?exercises=${TherapyGifs[BodyParts.NECK]}`, //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Middle Nick
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 401, //check the X, Y coordinates guide in the documentation
       pos_Y: 245,
       size: 32, //size of the pin
@@ -68,13 +62,11 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: `${Path.THERAPY}?exercises=${TherapyGifs[BodyParts.NECK]}`, //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Left Arm
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 230, //check the X, Y coordinates guide in the documentation
       pos_Y: 280,
       size: 32, //size of the pin
@@ -82,12 +74,10 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 280, //check the X, Y coordinates guide in the documentation
       pos_Y: 290,
       size: 32, //size of the pin
@@ -95,13 +85,11 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Chest
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 290, //check the X, Y coordinates guide in the documentation
       pos_Y: 410,
       size: 32, //size of the pin
@@ -109,12 +97,10 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'A'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 310, //check the X, Y coordinates guide in the documentation
       pos_Y: 450,
       size: 32, //size of the pin
@@ -122,7 +108,7 @@ export const spotsConfigA: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
   ],
@@ -146,7 +132,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Left Arm
@@ -160,7 +146,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -173,7 +159,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Left Back
@@ -187,7 +173,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -200,7 +186,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -213,7 +199,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Right Back
@@ -227,7 +213,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -240,7 +226,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -253,7 +239,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -266,7 +252,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Left Loin
@@ -280,7 +266,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
@@ -293,7 +279,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
     // Right Arm
@@ -307,7 +293,7 @@ export const spotsConfigB: Pins = {
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
       url: 'https://www.humananatomyillustrations.com/', //link to any webpage
-      target: 'new_window', // use "new_window", "same_window", "modal", or "none"
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
   ],
