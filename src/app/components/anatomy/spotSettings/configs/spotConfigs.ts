@@ -134,8 +134,6 @@ export const spotsConfigB: Pins = {
   pins: [
     // Head
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 373, //check the X, Y coordinates guide in the documentation
       pos_Y: 140,
       size: 32, //size of the pin
@@ -148,8 +146,6 @@ export const spotsConfigB: Pins = {
     },
     // Left Arm
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 210, //check the X, Y coordinates guide in the documentation
       pos_Y: 280,
       size: 32, //size of the pin
@@ -161,8 +157,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 255, //check the X, Y coordinates guide in the documentation
       pos_Y: 290,
       size: 32, //size of the pin
@@ -175,8 +169,6 @@ export const spotsConfigB: Pins = {
     },
     // Left Back
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 360, //check the X, Y coordinates guide in the documentation
       pos_Y: 280,
       size: 32, //size of the pin
@@ -188,8 +180,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 350, //check the X, Y coordinates guide in the documentation
       pos_Y: 400,
       size: 32, //size of the pin
@@ -201,8 +191,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 350, //check the X, Y coordinates guide in the documentation
       pos_Y: 440,
       size: 32, //size of the pin
@@ -215,8 +203,6 @@ export const spotsConfigB: Pins = {
     },
     // Right Back
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 450, //check the X, Y coordinates guide in the documentation
       pos_Y: 230,
       size: 32, //size of the pin
@@ -228,8 +214,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 450, //check the X, Y coordinates guide in the documentation
       pos_Y: 330,
       size: 32, //size of the pin
@@ -241,8 +225,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 480, //check the X, Y coordinates guide in the documentation
       pos_Y: 390,
       size: 32, //size of the pin
@@ -254,8 +236,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 520, //check the X, Y coordinates guide in the documentation
       pos_Y: 440,
       size: 32, //size of the pin
@@ -268,8 +248,6 @@ export const spotsConfigB: Pins = {
     },
     // Left Loin
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 320, //check the X, Y coordinates guide in the documentation
       pos_Y: 510,
       size: 32, //size of the pin
@@ -281,8 +259,6 @@ export const spotsConfigB: Pins = {
       enabled: true, //true/false to activate/deactivate this pin
     },
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 320, //check the X, Y coordinates guide in the documentation
       pos_Y: 570,
       size: 32, //size of the pin
@@ -295,8 +271,6 @@ export const spotsConfigB: Pins = {
     },
     // Right Arm
     {
-      hover:
-        "<u><b>Example 'C'</b></u><br>Add unlimited number of spots<br>anywhere on the diagram and<br>customize its colors and size and<br>link it to any webpage.", //info of the popup
       pos_X: 570, //check the X, Y coordinates guide in the documentation
       pos_Y: 290,
       size: 32, //size of the pin
