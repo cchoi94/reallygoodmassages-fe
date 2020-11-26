@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { MuscleExerciseGifs } from 'app/dictionaries/therapyGifs';
+import { MuscleExerciseGifs } from 'app/dictionaries/muscleExerciseGifs';
 import { useState } from 'react';
 
 interface ExerciseList {

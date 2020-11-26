@@ -7,14 +7,14 @@ interface GifAttributes {
 }
 
 export const GifContainer: React.FC<GifAttributes> = ({
-  link = 'https://streamable.com/e/i2wph9?autoplay=1',
+  link = 'https://streamable.com/e/i2wph9',
 }) => {
   return (
     <div className={cls.wrapper}>
       <iframe
         title='gifIframe'
         className={cls.media}
-        src={link}
+        src={`${link}?autoplay=1`}
         frameBorder='0'
       ></iframe>
     </div>
