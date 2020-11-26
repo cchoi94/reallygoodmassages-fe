@@ -9,7 +9,7 @@ interface GifAttributes {
 
 export const GifContainer: React.FC<GifAttributes> = ({
   link = 'https://streamable.com/e/i2wph9?autoplay=1',
-  sizeRatio = 50,
+  sizeRatio = 35,
 }) => {
   return (
     <div className={cls.wrapper} style={{ paddingBottom: `${sizeRatio}%` }}>
