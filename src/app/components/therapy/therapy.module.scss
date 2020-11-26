@@ -51,6 +51,10 @@ $gutter: 8px;
 
 @media (max-width: 640px) {
   .backBtn {
-    display: none;
+    top: -36px;
+    left: 8px;
+  }
+  .header {
+    margin: $gutter 0;
   }
 }
