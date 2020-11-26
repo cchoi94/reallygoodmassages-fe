@@ -1,64 +1,8 @@
-@import '../../dictionaries/themes/colors/colors.module.scss';
+@import '../../dictionaries/themes/colors.module.scss';
 
 $gutter: 8px;
 
 $border: $gutter/2 solid $blue;
-
-.section {
-  height: calc(100vh - 40px);
-}
-
-.homeWrapper {
-  display: flex;
-  border: $border;
-  height: 100%;
-}
-
-.sideDescription {
-  width: 25%;
-  border-left: $border;
-  position: relative;
-}
-
-.infoBox {
-  width: 100%;
-  border-bottom: $border;
-  &:last-child {
-    border: none;
-  }
-}
-
-.title {
-  font-weight: 700;
-  font-size: $gutter * 3;
-  padding: $gutter * 2;
-  border-bottom: $border;
-}
-
-.description {
-  padding: 16px;
-  p:not(:last-child) {
-    line-height: $gutter * 3;
-    margin-bottom: $gutter * 2;
-  }
-
-  ul {
-    padding-left: $gutter * 2;
-    list-style: none;
-    li {
-      line-height: $gutter * 3;
-      margin-bottom: $gutter * 2;
-    }
-    li::before {
-      content: '\2022';
-      color: $blue;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-  }
-}
 
 .emoBullet {
   display: flex;
@@ -66,27 +10,5 @@ $border: $gutter/2 solid $blue;
   align-items: baseline;
   .starEmo {
     margin-right: $gutter / 2;
-  }
-}
-
-.bold {
-  font-weight: 700;
-}
-
-@media (max-width: 1265px) {
-  .homeWrapper {
-    flex-direction: column;
-    height: initial;
-    border: none;
-  }
-
-  .section {
-    padding: 100px 0 !important;
-  }
-
-  .sideDescription {
-    width: 100%;
-    margin-top: $gutter * 4;
-    border: none;
   }
 }

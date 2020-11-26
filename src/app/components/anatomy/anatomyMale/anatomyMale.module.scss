@@ -1,4 +1,4 @@
-@import '../../../dictionaries/themes/colors/colors.module.scss';
+@import '../../../dictionaries/themes/colors.module.scss';
 
 $gutter: 8px;
 
@@ -9,12 +9,6 @@ $gutter: 8px;
   left: 20px;
   top: 20px;
   width: 120px;
-}
-
-.anatomyWrapper {
-  width: 75%;
-  position: relative;
-  text-align: center;
 }
 
 .anatomy {
@@ -46,13 +40,6 @@ $gutter: 8px;
 }
 
 @media (max-width: 1265px) {
-  .anatomyWrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .anatomy {
     width: 80%;
   }

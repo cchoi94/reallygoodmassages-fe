@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro&display=swap');
-@import './dictionaries/themes/colors/colors.module.scss';
+@import './dictionaries/themes/colors.module.scss';
+
+$gutter: 8px;
+$border: $gutter/2 solid $blue;
 
 * {
   margin: 0;
@@ -19,8 +22,98 @@ body {
   font-size: 16px;
 }
 
+// Basic section page
+
 :global(.section) {
   padding: 100px 40px 0 40px;
+  height: calc(100vh - 40px);
+}
+
+:global(.wrapper) {
+  display: flex;
+  border: $border;
+  height: 100%;
+}
+
+:global(.sideDescription) {
+  width: 25%;
+  border-left: $border;
+  position: relative;
+}
+
+:global(.infoBox) {
+  width: 100%;
+  border-bottom: $border;
+  &:last-child {
+    border: none;
+  }
+}
+
+:global(.title) {
+  font-weight: 700;
+  font-size: $gutter * 3;
+  padding: $gutter * 2;
+  border-bottom: $border;
+}
+
+:global(.description) {
+  padding: 16px;
+  p:not(:last-child) {
+    line-height: $gutter * 3;
+    margin-bottom: $gutter * 2;
+  }
+
+  ul {
+    padding-left: $gutter * 2;
+    list-style: none;
+    li {
+      line-height: $gutter * 3;
+      margin-bottom: $gutter * 2;
+    }
+    li::before {
+      content: '\2022';
+      color: $blue;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+}
+
+:global(.mainSection) {
+  width: 75%;
+  position: relative;
+  text-align: center;
+}
+
+:global(.bold) {
+  font-weight: 700;
+}
+
+@media (max-width: 1265px) {
+  :global(.wrapper) {
+    flex-direction: column;
+    height: initial;
+    border: none;
+  }
+
+  :global(.section) {
+    padding: 100px 0 !important;
+  }
+
+  :global(.sideDescription) {
+    width: 100%;
+    margin-top: $gutter * 4;
+    border: none;
+  }
+
+  :global(.mainSection) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 // Button btn

@@ -1,20 +1,27 @@
 import React from 'react';
-import { AnatomyMale } from 'app/components/anatomy/anatomyMale/anatomyMale';
-import classNames from 'classnames';
+import { useTherapy } from './useTherapy';
+import { GifContainer } from '../commons/gifContainer/gifContainer';
 
-import cls from './home.module.scss';
+import cls from './therapy.module.scss';
 
-export const Home: React.FC = () => {
+export const Therapy: React.FC = () => {
+  const { gifList } = useTherapy();
   return (
-    <div className={classNames('section')}>
+    <div className={'section'}>
       <div id='wrapper' className={'wrapper'}>
-        <div id='anatomyWrapper' className={'mainSection'}>
-          <AnatomyMale />
+        <div className={'mainSection'}>
+          <p>Try these out.</p>
+          {/* gif player */}
+          <GifContainer />
+          {gifList.map(gif => (
+            <div className={cls.excercisesContainer}>{gif.exercise}</div>
+          ))}
+          {/* exercise list */}
         </div>
         <div id='sideDescription' className={'sideDescription'}>
           <div className={'infoBox'}>
             <div className={'title'}>
-              <p>What is it?</p>
+              <p>Message Techniques</p>
             </div>
             <div className={'description'}>
               <p>
@@ -37,7 +44,7 @@ export const Home: React.FC = () => {
           </div>
           <div className={'infoBox'}>
             <div className={'title'}>
-              <p>How does it work?</p>
+              <p>General Tips</p>
             </div>
             <div className={'description'}>
               <ul>
@@ -53,16 +60,6 @@ export const Home: React.FC = () => {
                   Follow the animated gifs to rid of yourself of these pains.
                 </li>
               </ul>
-              <p className={cls.emoBullet}>
-                <span className={cls.starEmo} role='img' aria-label='star'>
-                  ⭐️
-                </span>{' '}
-                <p>
-                  <span className={'bold'}>Bonus:</span> Email us and let us
-                  know if these technique are effective for you. We’d love to
-                  learn and continue to improve on the library.
-                </p>
-              </p>
             </div>
           </div>
         </div>

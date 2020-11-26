@@ -9,25 +9,23 @@ export const AnatomyMale: React.FC = () => {
   const { resetZoom } = useAnatomyMale();
   return (
     <>
-      <div id='anatomyWrapper' className={cls.anatomyWrapper}>
-        <button
-          id='anatomyBackBtn'
-          className={classNames('btn btn-secondary', cls.backBtn)}
-          onClick={resetZoom}
-        >
-          <span className={cls.chevron}>{'<'}</span>Back
-        </button>
-        <h1 id='anatomyBackgroundText' className={cls.backgroundText}>
-          Back
-        </h1>
-        <div
-          className={cls.anatomy}
-          dangerouslySetInnerHTML={{ __html: anatomyMale }}
-        />
-        <p id='instructions' className={cls.instructions}>
-          Tell us where you are hurting by clicking on that spot.
-        </p>
-      </div>
+      <button
+        id='anatomyBackBtn'
+        className={classNames('btn btn-secondary', cls.backBtn)}
+        onClick={resetZoom}
+      >
+        <span className={cls.chevron}>{'<'}</span>Back
+      </button>
+      <h1 id='anatomyBackgroundText' className={cls.backgroundText}>
+        Back
+      </h1>
+      <div
+        className={cls.anatomy}
+        dangerouslySetInnerHTML={{ __html: anatomyMale }}
+      />
+      <p id='instructions' className={cls.instructions}>
+        Tell us where you are hurting by clicking on that spot.
+      </p>
     </>
   );
 };
