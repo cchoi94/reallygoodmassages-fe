@@ -1,22 +1,41 @@
 import React from 'react';
 import { useTherapy } from './useTherapy';
 import { GifContainer } from '../commons/gifContainer/gifContainer';
+import classNames from 'classnames';
 
 import cls from './therapy.module.scss';
 
 export const Therapy: React.FC = () => {
-  const { gifList } = useTherapy();
+  const { exerciseList, selectedExercise, setSelectedExercise } = useTherapy();
   return (
     <div className={'section'}>
       <div id='wrapper' className={'wrapper'}>
         <div className={'mainSection'}>
-          <p>Try these out.</p>
-          {/* gif player */}
-          <GifContainer />
-          {gifList.map(gif => (
-            <div className={cls.excercisesContainer}>{gif.exercise}</div>
-          ))}
-          {/* exercise list */}
+          <p className={cls.header}>Try these out.</p>
+          <GifContainer link={selectedExercise.gif} />
+          <div className={cls.excercisesContainer}>
+            {exerciseList.map(({ name, thumbnail, gif }, index) => (
+              <button
+                key={`${name}${index}`}
+                className={classNames('btn', cls.thumbnailContainer, {
+                  [cls.activeThumbnail]: selectedExercise.name === name,
+                })}
+                onClick={() =>
+                  setSelectedExercise({
+                    name,
+                    thumbnail,
+                    gif,
+                  })
+                }
+              >
+                <img
+                  className={cls.thumbnail}
+                  src={thumbnail}
+                  alt={`thumbnail img of ${name} exercise`}
+                />
+              </button>
+            ))}
+          </div>
         </div>
         <div id='sideDescription' className={'sideDescription'}>
           <div className={'infoBox'}>

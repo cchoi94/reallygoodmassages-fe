@@ -1,0 +1,36 @@
+@import '../../dictionaries/themes/colors.module.scss';
+
+$gutter: 8px;
+
+.header {
+  font-family: Lora;
+  font-weight: 700;
+  font-size: 36px;
+  margin: $gutter * 3 0 $gutter * 9;
+  color: $blue;
+}
+
+.excercisesContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: $gutter * 5;
+}
+
+.thumbnailContainer {
+  border-radius: 0 !important;
+  transition: 0ms !important;
+}
+
+.thumbnailContainer:not(:last-child) {
+  margin-right: $gutter * 2;
+}
+
+.thumbnail {
+  width: $gutter * 10;
+  height: $gutter * 10;
+}
+
+.activeThumbnail {
+  border: 2px solid $blue !important;
+}

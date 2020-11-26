@@ -1,5 +1,6 @@
 import { SpotColors } from 'app/components/anatomy/spotSettings/spotColors';
-import { Muscles } from 'app/dictionaries/muscles';
+import { TherapyGifs } from 'app/dictionaries/therapyGifs';
+import { BodyParts } from 'app/dictionaries/bodyParts';
 import { Path } from 'app/Path';
 
 interface ConfigAttributes {
@@ -38,7 +39,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${Muscles.STERNOCLEIDOMASTERTOID}`, //link to any webpage
+      url: `${Path.THERAPY}?exercises=${TherapyGifs[BodyParts.NECK]}`, //link to any webpage
       target: 'new_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -52,7 +53,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${Muscles.STERNOCLEIDOMASTERTOID}`, //link to any webpage
+      url: `${Path.THERAPY}?exercises=${TherapyGifs[BodyParts.NECK]}`, //link to any webpage
       target: 'new_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -66,7 +67,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${Muscles.STERNOCLEIDOMASTERTOID}`, //link to any webpage
+      url: `${Path.THERAPY}?exercises=${TherapyGifs[BodyParts.NECK]}`, //link to any webpage
       target: 'new_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
