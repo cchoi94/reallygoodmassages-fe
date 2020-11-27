@@ -35,7 +35,7 @@ body {
 }
 
 :global(.sideDescription) {
-  width: 25%;
+  width: 34%;
   border-left: $border;
   position: relative;
 }
@@ -58,7 +58,6 @@ body {
 :global(.description) {
   padding: 16px;
   p:not(:last-child) {
-    line-height: $gutter * 3;
     margin-bottom: $gutter * 2;
   }
 
@@ -66,7 +65,6 @@ body {
     padding-left: $gutter * 2;
     list-style: none;
     li {
-      line-height: $gutter * 3;
       margin-bottom: $gutter * 2;
     }
     li::before {
