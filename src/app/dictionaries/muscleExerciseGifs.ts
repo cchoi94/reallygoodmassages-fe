@@ -55,7 +55,7 @@ export const MuscleExerciseGifs: any = {
     thumbnail: Rhomboid,
   },
   [Muscles.STERNOCLEIDOMASTERTOID]: {
-    gif: 'https://streamable.com/e/e/i2wph9',
+    gif: 'https://streamable.com/e/i2wph9',
     thumbnail: Sternocleidomastertoid,
   },
 };
