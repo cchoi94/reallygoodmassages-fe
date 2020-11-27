@@ -6,9 +6,9 @@ import { Path } from 'app/Path';
 export const NavBar: React.FC = () => {
   return (
     <div id='navbar' className={cls.container}>
-      <Link className={cls.logo} to={Path.HOME}>
+      <a className={cls.logo} href={Path.HOME}>
         <div></div>
-      </Link>
+      </a>
       <div className={cls.links}>
         <Link to={Path.GLOSSARY}>Glossary</Link>
         <Link to={Path.ABOUT}>About</Link>
