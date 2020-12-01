@@ -19,6 +19,7 @@ body {
   li,
   a {
     font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
   }
   font-size: 16px;
 }
@@ -36,9 +37,6 @@ body {
   position: relative;
 }
 
-:global(.infoBox) {
-}
-
 :global(.title) {
   font-weight: 700;
   font-size: 24px;
@@ -48,6 +46,7 @@ body {
 
 :global(.description) {
   padding: 16px;
+  line-height: $gutter * 3;
   p:not(:last-child) {
     margin-bottom: $gutter * 2;
   }

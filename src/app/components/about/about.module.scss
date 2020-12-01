@@ -1,0 +1,51 @@
+@import '../../dictionaries/themes/colors.module.scss';
+
+$gutter: 8px;
+
+.section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 820px;
+}
+
+.description,
+.link {
+  font-size: $gutter * 2.5;
+}
+
+.link {
+  color: $blue;
+  font-weight: 700;
+}
+
+.lineDivider {
+  margin: $gutter * 4 0;
+  border: 1px solid #000000;
+  width: 80px;
+}
+
+.infoBoxContainer {
+  display: flex;
+  margin-bottom: $gutter * 10.5;
+  justify-content: space-between;
+}
+
+.infoBox {
+  width: 42%;
+  .title {
+    font-size: $gutter * 2.5;
+    font-weight: 700;
+    margin-bottom: $gutter * 2;
+  }
+  .infoBoxDescription {
+    margin-bottom: $gutter * 2.5;
+  }
+}
+
+.subscribe {
+  background: #f8f8f8;
+  border-radius: 24px;
+}
