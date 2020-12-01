@@ -11,17 +11,20 @@ $gutter: 8px;
   max-width: $gutter * 64.5;
 }
 
-.glossaryBox {
-  text-align: left;
-  .title {
-    color: $blue;
-    font-weight: 700;
-    padding-left: $gutter * 2;
-  }
+.title {
+  color: $blue;
+  font-weight: 700;
+}
+
+.whatsComingList {
+  margin-top: $gutter * 7;
+}
+
+.whatsComingItem {
 }
 
 .emoStarDivider {
   display: flex;
   justify-content: center;
-  margin: 0 $gutter * 3;
+  margin: $gutter * 2 0;
 }

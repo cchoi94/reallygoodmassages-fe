@@ -6,7 +6,7 @@ import cls from './glossary.module.scss';
 export const Glossary: React.FC = () => {
   return (
     <div className={classNames('section', cls.section)}>
-      <h1 className={'title'}>Glossary</h1>
+      <h1 className={'headerTitle'}>Glossary</h1>
       <div className={'lineDivider'}></div>
       <div className={cls.glossaryBox}>
         <p className={cls.title}>Myofascial Pain</p>

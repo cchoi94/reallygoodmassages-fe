@@ -5,6 +5,7 @@ import { Home } from '../components/home/home';
 import { Therapy } from 'app/components/therapy/therapy';
 import { About } from 'app/components/about/about';
 import { Glossary } from 'app/components/glossary/glossary';
+import { Whatscoming } from 'app/components/whatscoming/whatscoming';
 
 const Routes = () => {
   return (
@@ -12,11 +13,17 @@ const Routes = () => {
       <Route exact path={Path.HOME}>
         <Home />
       </Route>
-      <Route path={Path.ABOUT}>
-        <About />
+      <Route path={Path.GLOSSARY}>
+        <Glossary />
       </Route>
       <Route path={Path.GLOSSARY}>
         <Glossary />
+      </Route>
+      <Route path={Path.WHATSCOMMING}>
+        <Whatscoming />
+      </Route>
+      <Route path={Path.ABOUT}>
+        <About />
       </Route>
       <Route path={Path.THERAPY}>
         <Therapy />
