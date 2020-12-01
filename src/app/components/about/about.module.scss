@@ -90,6 +90,7 @@ $gutter: 8px;
 @media (max-width: 640px) {
   .infoBoxContainer {
     flex-direction: column;
+    padding: $gutter * 2;
   }
 
   .infoBox {
@@ -117,6 +118,6 @@ $gutter: 8px;
   }
 
   .subscribeBtn {
-    padding: 0 $gutter;
+    padding: 0 $gutter * 2.5;
   }
 }
