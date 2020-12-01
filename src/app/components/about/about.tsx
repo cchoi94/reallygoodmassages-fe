@@ -18,7 +18,7 @@ export const About: React.FC = () => {
         . We made this massage technique library for people to quickly relief
         themselves of annoying pains.
       </p>
-      <div className={cls.lineDivider}></div>
+      <div className={'lineDivider'}></div>
       <div className={cls.infoBoxContainer}>
         <div className={cls.infoBox}>
           <p className={cls.title}>

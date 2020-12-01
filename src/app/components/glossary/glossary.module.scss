@@ -1,0 +1,27 @@
+@import '../../dictionaries/themes/colors.module.scss';
+
+$gutter: 8px;
+
+.section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.glossaryBox {
+  text-align: left;
+  .title {
+    color: $blue;
+    font-weight: 700;
+    padding-left: $gutter * 2;
+  }
+}
+
+.emoStarDivider {
+  display: flex;
+  justify-content: center;
+  margin: 0 $gutter * 3;
+}

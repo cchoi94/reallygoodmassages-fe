@@ -4,6 +4,7 @@ import { Path } from '../Path';
 import { Home } from '../components/home/home';
 import { Therapy } from 'app/components/therapy/therapy';
 import { About } from 'app/components/about/about';
+import { Glossary } from 'app/components/glossary/glossary';
 
 const Routes = () => {
   return (
@@ -13,6 +14,9 @@ const Routes = () => {
       </Route>
       <Route path={Path.ABOUT}>
         <About />
+      </Route>
+      <Route path={Path.GLOSSARY}>
+        <Glossary />
       </Route>
       <Route path={Path.THERAPY}>
         <Therapy />
