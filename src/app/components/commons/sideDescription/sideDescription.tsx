@@ -28,6 +28,15 @@ export const SideDescription: React.FC<OwnProps> = ({
         >
           ?
         </span>
+        <span
+          className={classNames(
+            cls.questionMarkIcon,
+            cls.questionMarkIconMobile
+          )}
+          onClick={() => setIsSideDescriptionShown(!isSideDescriptionShown)}
+        >
+          ?
+        </span>
       </div>
       <div
         id='sideDescription'
