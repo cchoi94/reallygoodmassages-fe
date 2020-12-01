@@ -1,3 +1,5 @@
 export const useAbout = () => {
-  return {};
+  const onSubmit = () =>
+    window.open('https://buttondown.email/Aladar', 'popupwindow');
+  return { onSubmit };
 };

@@ -27,6 +27,12 @@ $gutter: 8px;
   width: 80px;
 }
 
+.title {
+  font-size: $gutter * 2.5;
+  font-weight: 700;
+  margin-bottom: $gutter * 2;
+}
+
 .infoBoxContainer {
   display: flex;
   margin-bottom: $gutter * 10.5;
@@ -35,17 +41,82 @@ $gutter: 8px;
 
 .infoBox {
   width: 42%;
-  .title {
-    font-size: $gutter * 2.5;
-    font-weight: 700;
-    margin-bottom: $gutter * 2;
-  }
   .infoBoxDescription {
     margin-bottom: $gutter * 2.5;
   }
 }
 
 .subscribe {
+  display: flex;
+  justify-content: space-around;
   background: #f8f8f8;
   border-radius: 24px;
+  text-align: left;
+  padding: 24px 40px;
+  align-items: center;
+}
+
+.subscribeSection,
+.subscribeForm {
+  display: flex;
+  width: 45%;
+  position: relative;
+}
+
+.subscribeSection {
+  flex-direction: column;
+}
+
+.subscribeForm {
+  max-height: $gutter * 8;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #2b2b2b;
+}
+
+.subscribeEmailInput {
+  width: 300px;
+  padding: ($gutter * 1.5) ($gutter * 2);
+  border: none;
+  font-size: 16px;
+}
+
+.subscribeBtn {
+  background: $blue;
+  border: none;
+  padding: 0 $gutter * 2.5;
+}
+
+@media (max-width: 640px) {
+  .infoBoxContainer {
+    flex-direction: column;
+  }
+
+  .infoBox {
+    width: 100%;
+  }
+
+  .infoBox:not(:last-child) {
+    margin-bottom: $gutter * 8;
+  }
+
+  .subscribe {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .subscribeSection,
+  .subscribeForm {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+  .subscribeSection {
+    margin-bottom: $gutter * 4;
+  }
+
+  .subscribeBtn {
+    padding: 0 $gutter;
+  }
 }
