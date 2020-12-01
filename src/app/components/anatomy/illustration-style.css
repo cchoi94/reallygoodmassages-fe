@@ -71,17 +71,17 @@
 }
 @media screen and (max-width: 400px) and (min-width: 321px) {
   #anawrapper svg {
-    height: 510px;
+    height: calc(100vh - 136px);
   }
 }
 @media screen and (max-width: 480px) and (min-width: 401px) {
   #anawrapper svg {
-    height: 660px;
+    height: calc(100vh - 136px);
   }
 }
 @media screen and (max-width: 568px) and (min-width: 481px) {
   #anawrapper svg {
-    height: 690px;
+    height: calc(100vh - 240px);
   }
 }
 @media screen and (min-width: 569px) {

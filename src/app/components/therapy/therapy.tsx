@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTherapy } from './useTherapy';
-import { GifContainer } from '../commons/gifContainer/gifContainer';
+import { GifContainer } from 'app/components/commons/gifContainer/gifContainer';
 import classNames from 'classnames';
 import { Path } from 'app/Path';
+import { SideDescription } from 'app/components/commons/sideDescription/sideDescription';
 
 import cls from './therapy.module.scss';
 
@@ -45,7 +46,7 @@ export const Therapy: React.FC = () => {
             ))}
           </div>
         </div>
-        <div id='sideDescription' className={'sideDescription'}>
+        <SideDescription toolTipTitle={'Message Tips & Tricks'}>
           <div className={'infoBox'}>
             <div className={'title'}>
               <p>Message Techniques</p>
@@ -89,7 +90,7 @@ export const Therapy: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </SideDescription>
       </div>
     </div>
   );

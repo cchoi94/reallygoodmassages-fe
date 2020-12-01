@@ -3,6 +3,7 @@
 
 $gutter: 8px;
 $border: $gutter/2 solid $blue;
+$transition: all 300ms ease-in-out;
 
 * {
   margin: 0;
@@ -32,27 +33,17 @@ body {
   display: flex;
   border: $border;
   height: calc(100vh - 140px);
-}
-
-:global(.sideDescription) {
-  width: 34%;
-  border-left: $border;
   position: relative;
 }
 
 :global(.infoBox) {
-  width: 100%;
-  border-bottom: $border;
-  &:last-child {
-    border: none;
-  }
 }
 
 :global(.title) {
   font-weight: 700;
+  font-size: 24px;
   font-size: $gutter * 3;
   padding: $gutter * 2;
-  border-bottom: $border;
 }
 
 :global(.description) {
@@ -79,12 +70,35 @@ body {
 }
 
 :global(.mainSection) {
-  width: 75%;
+  width: 100%;
   position: relative;
   text-align: center;
 }
 
 :global(.bold) {
+  font-weight: 700;
+}
+
+// Button btn
+
+:global(.btn) {
+  padding: 12px 16px;
+  max-width: 100%;
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: $transition;
+  border-radius: 50px;
+}
+
+:global(.btn-primary) {
+  background: $blue;
+}
+
+:global(.btn-secondary) {
+  background: #ffffff;
+  border: 2px solid $blue;
+  color: $blue;
   font-weight: 700;
 }
 
@@ -99,39 +113,11 @@ body {
     padding: 100px 0 !important;
   }
 
-  :global(.sideDescription) {
-    width: 100%;
-    margin-top: $gutter * 4;
-    border: none;
-  }
-
   :global(.mainSection) {
     width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-}
-
-// Button btn
-
-:global(.btn) {
-  padding: 12px 16px;
-  max-width: 100%;
-  border: 2px solid transparent;
-  background: transparent;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-  border-radius: 50px;
-}
-
-:global(.btn-primary) {
-  background: $blue;
-}
-
-:global(.btn-secondary) {
-  background: #ffffff;
-  border: 2px solid $blue;
-  color: $blue;
-  font-weight: 700;
 }
