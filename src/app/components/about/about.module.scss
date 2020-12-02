@@ -83,6 +83,9 @@ $gutter: 8px;
 }
 
 @media (max-width: 640px) {
+  .section {
+    height: 100%;
+  }
   .infoBoxContainer {
     flex-direction: column;
     padding: $gutter * 2;
