@@ -20,7 +20,7 @@ export const SideDescription: React.FC<OwnProps> = ({
   return (
     <>
       <div className={cls.sideDescriptionToolTip}>
-        <p className={cls.toolTipTitle}>{toolTipTitle}</p>
+        <p className={classNames(cls.toolTipTitle, 'bold')}>{toolTipTitle}</p>
         <span
           className={cls.questionMarkIcon}
           onMouseEnter={() => setIsSideDescriptionShown(true)}

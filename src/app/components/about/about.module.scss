@@ -97,19 +97,29 @@ $gutter: 8px;
   }
 
   .subscribe {
-    width: 100vw;
+    width: 90vw;
     flex-direction: column;
+    margin-bottom: $gutter * 2;
+    min-height: 240px;
   }
 
   .subscribeSection,
   .subscribeForm {
     display: flex;
-    width: 360px;
     position: relative;
   }
 
   .subscribeSection {
     margin-bottom: $gutter * 4;
+    width: 100%;
+  }
+
+  .subscribeForm {
+    width: 100%;
+  }
+
+  .subscribeEmailInput {
+    width: 180px;
   }
 
   .subscribeBtn {

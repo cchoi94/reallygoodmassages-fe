@@ -15,9 +15,7 @@ export const Home: React.FC = () => (
         </div>
         <SideDescription toolTipTitle={'How does it work?'}>
           <div className={'infoBox'}>
-            <div className={'title'}>
-              <p>What is it?</p>
-            </div>
+            <p className={'title'}>What is it?</p>
             <div className={'description'}>
               <p>
                 This is a library of massage techniques based on the teachings
@@ -38,9 +36,7 @@ export const Home: React.FC = () => (
             </div>
           </div>
           <div className={'infoBox'}>
-            <div className={'title'}>
-              <p>How does it work?</p>
-            </div>
+            <p className={'title'}>How does it work?</p>
             <div className={'description'}>
               <ul>
                 <li>
