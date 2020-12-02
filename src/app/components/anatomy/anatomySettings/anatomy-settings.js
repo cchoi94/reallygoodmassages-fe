@@ -13,7 +13,7 @@ export var anaconfig = {
     //head
     isFrontFacing: true,
     hover: 'HEAD', //info of the popup
-    url: 'https://www.humananatomyillustrations.com/', //link to any webpage
+    url: '', //link to any webpage
     target: 'zoom', // use "new_window", "same_window", "modal" with bootstrap only, or "none"
     enabled: true, //true/false to activate/deactivate
     position: Positions.head,
@@ -21,25 +21,26 @@ export var anaconfig = {
   ana2: {
     //eye-rt
     isFrontFacing: true,
-
     hover: 'EYE [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
   },
   ana3: {
     //eye-lt
+    isFrontFacing: true,
     hover: 'EYE [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
   },
   ana4: {
     //ear-rt
+    isFrontFacing: true,
     hover: 'EAR [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
@@ -48,7 +49,7 @@ export var anaconfig = {
     //ear-lt
     isFrontFacing: true,
     hover: 'EAR [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
@@ -57,7 +58,7 @@ export var anaconfig = {
     //nose
     isFrontFacing: true,
     hover: 'NOSE',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
@@ -66,7 +67,7 @@ export var anaconfig = {
     //mouth
     isFrontFacing: true,
     hover: 'MOUTH',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
@@ -75,7 +76,7 @@ export var anaconfig = {
     //neck
     isFrontFacing: true,
     hover: 'NECK',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.neck,
@@ -84,7 +85,7 @@ export var anaconfig = {
     //chest
     isFrontFacing: true,
     hover: 'CHEST',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.chest,
@@ -93,7 +94,7 @@ export var anaconfig = {
     //abdomen
     isFrontFacing: true,
     hover: 'ABDOMEN',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.abdomen,
@@ -102,7 +103,7 @@ export var anaconfig = {
     //pelvis
     isFrontFacing: true,
     hover: 'PELVIS',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.pelvis,
@@ -111,7 +112,7 @@ export var anaconfig = {
     //pubis
     isFrontFacing: true,
     hover: 'PUBIS',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.pelvis,
@@ -120,7 +121,7 @@ export var anaconfig = {
     //shoulder-rt
     isFrontFacing: true,
     hover: 'SHOULDER [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.shoulderRt,
@@ -129,7 +130,7 @@ export var anaconfig = {
     //shoulder-lt
     isFrontFacing: true,
     hover: 'SHOULDER [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.shoulderLt,
@@ -138,7 +139,7 @@ export var anaconfig = {
     //arm-rt
     isFrontFacing: true,
     hover: 'ARM [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.armRt,
@@ -147,7 +148,7 @@ export var anaconfig = {
     //arm-lt
     isFrontFacing: true,
     hover: 'ARM [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.armLt,
@@ -156,7 +157,7 @@ export var anaconfig = {
     //elbow-rt
     isFrontFacing: true,
     hover: 'ELBOW [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.elbowRt,
@@ -165,7 +166,7 @@ export var anaconfig = {
     //elbow-lt
     isFrontFacing: true,
     hover: 'ELBOW [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.elbowLt,
@@ -174,7 +175,7 @@ export var anaconfig = {
     //forearm-rt
     isFrontFacing: true,
     hover: 'FOREARM [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.forearmRt,
@@ -183,7 +184,7 @@ export var anaconfig = {
     //forearm-lt
     isFrontFacing: true,
     hover: 'FOREARM [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.forearmLt,
@@ -192,7 +193,7 @@ export var anaconfig = {
     //wrist-rt
     isFrontFacing: true,
     hover: 'WRIST [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.wristRt,
@@ -201,7 +202,7 @@ export var anaconfig = {
     //wrist-lt
     isFrontFacing: true,
     hover: 'WRIST [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.wristLt,
@@ -210,7 +211,7 @@ export var anaconfig = {
     //hand-rt
     isFrontFacing: true,
     hover: 'HAND [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.handRt,
@@ -219,7 +220,7 @@ export var anaconfig = {
     //hand-lt
     isFrontFacing: true,
     hover: 'HAND [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.handLt,
@@ -228,7 +229,7 @@ export var anaconfig = {
     //thigh-rt
     isFrontFacing: true,
     hover: 'THIGH [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.thighRt,
@@ -237,7 +238,7 @@ export var anaconfig = {
     //thigh-lt
     isFrontFacing: true,
     hover: 'THIGH [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.thighLt,
@@ -246,7 +247,7 @@ export var anaconfig = {
     //knee-rt
     isFrontFacing: true,
     hover: 'KNEE [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.kneeRt,
@@ -255,7 +256,7 @@ export var anaconfig = {
     //knee-lt
     isFrontFacing: true,
     hover: 'KNEE [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.kneeLt,
@@ -264,7 +265,7 @@ export var anaconfig = {
     //leg-rt
     isFrontFacing: true,
     hover: 'LEG [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.legRt,
@@ -273,7 +274,7 @@ export var anaconfig = {
     //leg-lt
     isFrontFacing: true,
     hover: 'LEG [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.legLt,
@@ -282,7 +283,7 @@ export var anaconfig = {
     //ankle-rt
     isFrontFacing: true,
     hover: 'ANKLE [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.ankleRt,
@@ -291,7 +292,7 @@ export var anaconfig = {
     //ankle-lt
     isFrontFacing: true,
     hover: 'ANKLE [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.ankleLt,
@@ -300,7 +301,7 @@ export var anaconfig = {
     //foot-rt
     isFrontFacing: true,
     hover: 'FOOT [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footRt,
@@ -309,7 +310,7 @@ export var anaconfig = {
     //foot-lt
     isFrontFacing: true,
     hover: 'FOOT [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footLt,
@@ -322,7 +323,7 @@ export var anaconfig = {
   ana35: {
     //head-back
     hover: 'HEAD [BACK]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.head,
@@ -330,7 +331,7 @@ export var anaconfig = {
   ana36: {
     //neck-back
     hover: 'NECK [BACK]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.neck,
@@ -338,7 +339,7 @@ export var anaconfig = {
   ana37: {
     //back
     hover: 'BACK',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.chest,
@@ -346,7 +347,7 @@ export var anaconfig = {
   ana38: {
     //loin
     hover: 'LOIN',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.abdomen,
@@ -354,7 +355,7 @@ export var anaconfig = {
   ana39: {
     //buttocks
     hover: 'BUTTOCKS',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.buttocks,
@@ -362,7 +363,7 @@ export var anaconfig = {
   ana40: {
     //shoulder-back-rt
     hover: 'SHOULDER [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.shoulderLt,
@@ -370,7 +371,7 @@ export var anaconfig = {
   ana41: {
     //shoulder-back-lt
     hover: 'SHOULDER [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.shoulderRt,
@@ -378,7 +379,7 @@ export var anaconfig = {
   ana42: {
     //arm-back-rt
     hover: 'ARM [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.armLt,
@@ -386,7 +387,7 @@ export var anaconfig = {
   ana43: {
     //arm-back-lt
     hover: 'ARM [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.armRt,
@@ -394,7 +395,7 @@ export var anaconfig = {
   ana44: {
     //elbow-back-rt
     hover: 'ELBOW [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.elbowLt,
@@ -402,7 +403,7 @@ export var anaconfig = {
   ana45: {
     //elbow-back-lt
     hover: 'ELBOW [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.elbowRt,
@@ -410,7 +411,7 @@ export var anaconfig = {
   ana46: {
     //forearm-back-rt
     hover: 'FOREARM [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.forearmLt,
@@ -418,7 +419,7 @@ export var anaconfig = {
   ana47: {
     //forearm-back-lt
     hover: 'FOREARM [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.forearmRt,
@@ -426,7 +427,7 @@ export var anaconfig = {
   ana48: {
     //wrist-back-rt
     hover: 'WRIST [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.wristLt,
@@ -434,7 +435,7 @@ export var anaconfig = {
   ana49: {
     //wrist-back-lt
     hover: 'WRIST [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.wristRt,
@@ -442,7 +443,7 @@ export var anaconfig = {
   ana50: {
     //hand-back-rt
     hover: 'HAND [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.handLt,
@@ -450,7 +451,7 @@ export var anaconfig = {
   ana51: {
     //hand-back-lt
     hover: 'HAND [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.handRt,
@@ -458,7 +459,7 @@ export var anaconfig = {
   ana52: {
     //hamstring-rt
     hover: 'HAMSTRING [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.bThighRt,
@@ -466,7 +467,7 @@ export var anaconfig = {
   ana53: {
     //hamstring-lt
     hover: 'HAMSTRING [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.bThighLt,
@@ -474,7 +475,7 @@ export var anaconfig = {
   ana54: {
     //knee-back-rt
     hover: 'KNEE [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.kneeLt,
@@ -482,7 +483,7 @@ export var anaconfig = {
   ana55: {
     //knee-back-lt
     hover: 'KNEE [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.kneeRt,
@@ -490,7 +491,7 @@ export var anaconfig = {
   ana56: {
     //calf-rt
     hover: 'CALF [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.legLt,
@@ -498,7 +499,7 @@ export var anaconfig = {
   ana57: {
     //calf-lt
     hover: 'CALF [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.legRt,
@@ -506,7 +507,7 @@ export var anaconfig = {
   ana58: {
     //ankle-back-rt
     hover: 'ANKLE [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footLt,
@@ -514,7 +515,7 @@ export var anaconfig = {
   ana59: {
     //ankle-back-lt
     hover: 'ANKLE [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footRt,
@@ -522,7 +523,7 @@ export var anaconfig = {
   ana60: {
     //sole-rt
     hover: 'SOLE [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footLt,
@@ -530,7 +531,7 @@ export var anaconfig = {
   ana61: {
     //sole-lt
     hover: 'SOLE [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footRt,
@@ -538,7 +539,7 @@ export var anaconfig = {
   ana62: {
     //foot-back-rt
     hover: 'FOOT [BACK] [RT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footLt,
@@ -546,7 +547,7 @@ export var anaconfig = {
   ana63: {
     //foot-back-lt
     hover: 'FOOT [BACK] [LT]',
-    url: 'https://www.humananatomyillustrations.com/',
+    url: '',
     target: 'zoom',
     enabled: true,
     position: Positions.footRt,

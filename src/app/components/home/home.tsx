@@ -41,7 +41,7 @@ export const Home: React.FC = () => (
               <ul>
                 <li>
                   Tell us where you are hurting by clicking on the corresponding
-                  spots on the anatomical model
+                  spots on the anatomical model.
                 </li>
                 <li>
                   We will show you a list of techniques focused on addressing
