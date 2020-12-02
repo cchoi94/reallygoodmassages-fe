@@ -5,6 +5,8 @@ import HamburgerIcon from 'app/assets/images/icons/hamburger.svg';
 import XIcon from 'app/assets/images/icons/x.svg';
 import classNames from 'classnames';
 import { useNavBar } from './useNavBar';
+import LogoWithText from 'app/assets/images/icons/logoWithText.svg';
+import LogoIcon from 'app/assets/images/icons/logo.svg';
 
 import cls from './navBar.module.scss';
 
@@ -14,7 +16,16 @@ export const NavBar: React.FC = () => {
   return (
     <div id='navbar' className={cls.container}>
       <a className={cls.logo} href={Path.HOME}>
-        <div></div>
+        <img
+          className={cls.logoWithText}
+          src={LogoWithText}
+          alt='Really Good Message Logo'
+        />
+        <img
+          className={cls.logoIcon}
+          src={LogoIcon}
+          alt='Really Good Message Icon'
+        />
       </a>
       <div
         className={cls.hamburger}

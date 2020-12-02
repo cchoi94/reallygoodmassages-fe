@@ -5,7 +5,8 @@ $gutter: 8px;
 .container {
   display: flex;
   justify-content: space-between;
-  padding: $gutter * 5;
+  align-items: center;
+  padding: $gutter * 4;
   position: fixed;
   top: 0;
   width: 100%;
@@ -21,9 +22,11 @@ $gutter: 8px;
 }
 
 .logo {
-  width: $gutter * 20;
-  background: $blue;
   max-height: $gutter * 4;
+}
+
+.logoIcon {
+  display: none;
 }
 
 .links {
@@ -43,6 +46,12 @@ $gutter: 8px;
   }
   .hamburger {
     display: block;
+  }
+  .logoWithText {
+    display: none;
+  }
+  .logoIcon {
+    display: flex;
   }
   .links {
     display: flex;
