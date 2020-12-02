@@ -8,7 +8,7 @@ import cls from './about.module.scss';
 export const About: React.FC = () => {
   const { onSubmit } = useAbout();
   return (
-    <div className={classNames('section', cls.section)}>
+    <div id={'about'} className={classNames('section', cls.section)}>
       <h1 className={'title'}>About Us</h1>
       <p className={classNames('description', cls.description)}>
         Really Good Massages is a project by the{' '}

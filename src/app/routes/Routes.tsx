@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import { Path } from '../Path';
 import { Home } from '../components/home/home';
 import { Therapy } from 'app/components/therapy/therapy';
-import { About } from 'app/components/about/about';
 import { Glossary } from 'app/components/glossary/glossary';
 import { Whatscoming } from 'app/components/whatscoming/whatscoming';
 
@@ -21,9 +20,6 @@ const Routes = () => {
       </Route>
       <Route path={Path.WHATSCOMMING}>
         <Whatscoming />
-      </Route>
-      <Route path={Path.ABOUT}>
-        <About />
       </Route>
       <Route path={Path.THERAPY}>
         <Therapy />
