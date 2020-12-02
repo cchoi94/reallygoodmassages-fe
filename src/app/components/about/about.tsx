@@ -11,7 +11,7 @@ export const About: React.FC = () => {
     <div className={classNames('section', cls.section)}>
       <h1 className={'title'}>About Us</h1>
       <p className={classNames('description', cls.description)}>
-        “” is a project by the{' '}
+        Really Good Massages is a project by the{' '}
         <a className={cls.link} href='http://posturenaut.com/'>
           Posturenauts
         </a>
@@ -31,8 +31,12 @@ export const About: React.FC = () => {
             Support us with couple dollars, so we can keep updating this library
             for you.{' '}
           </p>
-          <button>Support</button>
-          {/* eggtart button */}
+          <div
+            dangerouslySetInnerHTML={{
+              __html:
+                "<div id='popup-eggtartio' class='eggtartio-popup'><div class='overlay'></div><div class='content'><div onclick = 'togglePopup()' class='close-btn'> ×</div><iframe src=https://portal.eggtart.io/users/29/support width='100%' height='100%' style='border:0'></iframe></div><button onclick = 'togglePopup()' class = 'eggtartio-button'> Support Really Good Massages</button></div>",
+            }}
+          />
         </div>
         <div className={cls.infoBox}>
           <p className={cls.title}>
