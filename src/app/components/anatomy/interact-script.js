@@ -109,7 +109,6 @@ function anaaddEvent(id, relationId) {
       } else if (anaconfig[id].target === 'modal') {
         $(anaconfig[id].url).modal('show');
       } else if (anaconfig[id].target === 'zoom') {
-        console.log('anaconfig[id]', anaconfig[id]);
         const cor = anaconfig[id].position.split(' ');
         $(anaconfig[id].isFrontFacing ? '#baseb' : '#basea').css({
           transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
