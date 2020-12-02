@@ -41,7 +41,7 @@ export const NavBar: React.FC = () => {
           onClick={() => setIsHambugerMenuOpen(false)}
           to={Path.WHATSCOMMING}
         >
-          what's coming?
+          What's coming?
         </Link>
         <Link onClick={() => setIsHambugerMenuOpen(false)} to={Path.ABOUT}>
           About
