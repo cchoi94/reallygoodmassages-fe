@@ -12,7 +12,12 @@ export const About: React.FC = () => {
       <h1 className={'title'}>About Us</h1>
       <p className={classNames('description', cls.description)}>
         Really Good Massages is a project by the{' '}
-        <a className={cls.link} href='http://posturenaut.com/'>
+        <a
+          className={cls.link}
+          target='_blank'
+          rel='noopener noreferrer'
+          href='http://posturenaut.com/'
+        >
           Posturenauts
         </a>
         . We made this massage technique library for people to quickly relief

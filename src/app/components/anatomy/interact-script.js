@@ -8,6 +8,39 @@ function isTouchEnabled() {
     navigator.msMaxTouchPoints > 0
   );
 }
+
+const resetZoom = () => {
+  $('#basea').css({
+    transform: 'scale(1)',
+    transformOrigin: '50% 50%',
+  });
+  $('#baseb').css({
+    transform: 'scale(1)',
+    transformOrigin: '50% 50%',
+  });
+  $('#anatomyBackBtn').css({
+    display: 'none',
+  });
+  $('#sideDescription').css({
+    display: 'block',
+  });
+  $('#anatomyBackgroundText').css({
+    display: 'block',
+  });
+  if ($(window).width() >= 1265) {
+    $('#homeWrapper').css({
+      border: '4px solid #2992fe',
+    });
+  }
+  $('#instructions').show();
+  $('#navbar').show();
+  $('#anaspotsa').hide();
+  $('#anaspotsb').hide();
+  $('body').css({
+    overflow: 'initial',
+  });
+};
+
 $(document).ready(function() {
   $('#anaspotsa').hide();
   $('#anaspotsb').hide();
@@ -15,6 +48,7 @@ $(document).ready(function() {
     .hide()
     .animate({ opacity: '0' }, 100);
   $('.gob').on('click', function() {
+    resetZoom();
     $('#baseb')
       .hide()
       .animate({ opacity: '0' }, 100);
@@ -24,6 +58,7 @@ $(document).ready(function() {
     $('#anatomyBackgroundText')[0].innerText = 'BACK';
   });
   $('.goa').on('click', function() {
+    resetZoom();
     $('#basea')
       .hide()
       .animate({ opacity: '0' }, 100);
