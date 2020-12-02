@@ -34,9 +34,18 @@ export const NavBar: React.FC = () => {
           [cls.hide]: !isHambugerMenuOpen,
         })}
       >
-        <Link to={Path.GLOSSARY}>Glossary</Link>
-        <Link to={Path.WHATSCOMMING}>what's coming?</Link>
-        <Link to={Path.ABOUT}>About</Link>
+        <Link onClick={() => setIsHambugerMenuOpen(false)} to={Path.GLOSSARY}>
+          Glossary
+        </Link>
+        <Link
+          onClick={() => setIsHambugerMenuOpen(false)}
+          to={Path.WHATSCOMMING}
+        >
+          what's coming?
+        </Link>
+        <Link onClick={() => setIsHambugerMenuOpen(false)} to={Path.ABOUT}>
+          About
+        </Link>
       </div>
     </div>
   );
