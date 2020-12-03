@@ -20,21 +20,21 @@ export const About: React.FC = () => {
         >
           Posturenauts
         </a>
-        . We made this massage technique library for people to quickly relief
+        . We made this massage technique library for people to quickly relieve
         themselves of annoying pains.
       </p>
       <div className={'lineDivider'}></div>
       <div className={cls.infoBoxContainer}>
         <div className={cls.infoBox}>
           <p className={cls.title}>
-            Like what we do? Tip Us{' '}
+            Like what we do? Tip us{' '}
             <span role='img' aria-label='present emoji'>
               🎁
             </span>
           </p>
           <p className={cls.infoBoxDescription}>
-            Support us with couple dollars, so we can keep updating this library
-            for you.{' '}
+            Support us with a couple dollars, so we can keep updating this
+            library for you.{' '}
           </p>
           <div
             dangerouslySetInnerHTML={{
@@ -77,7 +77,7 @@ export const About: React.FC = () => {
             type='email'
             name='email'
             id='bd-email'
-            placeholder='Enter your email address'
+            placeholder='Enter your email'
             className={cls.subscribeEmailInput}
           ></input>
           <input type='hidden' value='1' name='embed'></input>
