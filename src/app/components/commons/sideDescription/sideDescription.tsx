@@ -24,7 +24,6 @@ export const SideDescription: React.FC<OwnProps> = ({
         <span
           className={cls.questionMarkIcon}
           onMouseEnter={() => setIsSideDescriptionShown(true)}
-          onMouseLeave={() => setIsSideDescriptionShown(false)}
         >
           ?
         </span>
