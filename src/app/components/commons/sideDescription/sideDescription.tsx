@@ -18,12 +18,13 @@ export const SideDescription: React.FC<OwnProps> = ({
     setIsSideDescriptionShown,
   } = useSideDescription();
   return (
-    <div onMouseLeave={() => setIsSideDescriptionShown(false)}>
+    <>
       <div className={cls.sideDescriptionToolTip}>
         <p className={classNames(cls.toolTipTitle, 'bold')}>{toolTipTitle}</p>
         <span
           className={cls.questionMarkIcon}
           onMouseEnter={() => setIsSideDescriptionShown(true)}
+          onMouseLeave={() => setIsSideDescriptionShown(false)}
         >
           ?
         </span>
@@ -43,9 +44,10 @@ export const SideDescription: React.FC<OwnProps> = ({
           [cls.show]: isSideDescriptionShown,
           [cls.hide]: !isSideDescriptionShown,
         })}
+        onMouseLeave={() => setIsSideDescriptionShown(false)}
       >
         {children}
       </div>
-    </div>
+    </>
   );
 };
