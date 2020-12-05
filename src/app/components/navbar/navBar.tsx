@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import { Path } from 'app/Path';
 import HamburgerIcon from 'app/assets/images/icons/hamburger.svg';
 import XIcon from 'app/assets/images/icons/x.svg';
@@ -55,13 +54,9 @@ export const NavBar: React.FC = () => {
         >
           What's coming?
         </Link>
-        <HashLink
-          smooth
-          onClick={() => setIsHambugerMenuOpen(false)}
-          to={Path.ABOUT}
-        >
+        <a onClick={() => setIsHambugerMenuOpen(false)} href='/#about'>
           About
-        </HashLink>
+        </a>
       </div>
     </div>
   );
