@@ -366,7 +366,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.shoulderLt,
+    position: Positions.backShoulderRt,
   },
   ana41: {
     //shoulder-back-lt
@@ -374,7 +374,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.shoulderRt,
+    position: Positions.backShoulderLt,
   },
   ana42: {
     //arm-back-rt
@@ -382,7 +382,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.armLt,
+    position: Positions.backArmRt,
   },
   ana43: {
     //arm-back-lt
@@ -390,7 +390,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.armRt,
+    position: Positions.backArmLt,
   },
   ana44: {
     //elbow-back-rt
@@ -398,7 +398,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.elbowLt,
+    position: Positions.backElbowRt,
   },
   ana45: {
     //elbow-back-lt
@@ -406,7 +406,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.elbowRt,
+    position: Positions.backElbowLt,
   },
   ana46: {
     //forearm-back-rt
@@ -414,7 +414,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.forearmLt,
+    position: Positions.backForearmRt,
   },
   ana47: {
     //forearm-back-lt
@@ -422,7 +422,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.forearmRt,
+    position: Positions.backForearmLt,
   },
   ana48: {
     //wrist-back-rt
@@ -430,7 +430,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.wristLt,
+    position: Positions.backWristRt,
   },
   ana49: {
     //wrist-back-lt
@@ -438,7 +438,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.wristRt,
+    position: Positions.backWristLt,
   },
   ana50: {
     //hand-back-rt
@@ -446,7 +446,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.handLt,
+    position: Positions.backHandRt,
   },
   ana51: {
     //hand-back-lt
@@ -454,7 +454,7 @@ export var anaconfig = {
     url: '',
     target: 'zoom',
     enabled: true,
-    position: Positions.handRt,
+    position: Positions.backHandLt,
   },
   ana52: {
     //hamstring-rt
