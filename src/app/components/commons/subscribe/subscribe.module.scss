@@ -1,0 +1,63 @@
+@import '../../../dictionaries/themes/colors.module.scss';
+
+$gutter: 8px;
+
+.wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.subscribeForm {
+  max-height: $gutter * 8;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.border {
+  border: 1px solid $black;
+}
+
+.subscribeEmailInput {
+  width: 300px;
+  padding: ($gutter * 1.5) ($gutter * 2);
+  border: none;
+  font-size: 16px;
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+.subscribeBtn {
+  background: $blue;
+  border: none;
+  padding: 0 $gutter * 2.5;
+  height: 50px;
+  max-width: 40%;
+  $noBorderRadius: 0px;
+  border-top-left-radius: $noBorderRadius;
+  border-bottom-left-radius: $noBorderRadius;
+}
+
+.defaultBtnContent {
+  color: #ffffff;
+}
+
+.errMessage {
+  margin-top: $gutter;
+  color: $error;
+}
+
+@media (max-width: 640px) {
+  .subscribeForm {
+    width: 100%;
+  }
+  .subscribeEmailInput {
+    max-width: 240px;
+  }
+  .subscribeBtn {
+    font-size: 13px;
+    width: 60%;
+  }
+}

@@ -16,6 +16,7 @@ body {
   font-weight: 400;
   p,
   li,
+  input,
   a {
     font-family: 'Source Sans Pro', sans-serif !important;
     text-decoration: none;
@@ -87,7 +88,6 @@ body {
   background: transparent !important;
   cursor: pointer !important;
   transition: $transition !important;
-  border-radius: 50px !important;
   font-family: 'Source Sans Pro', sans-serif !important;
 }
 
