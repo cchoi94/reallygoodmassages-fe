@@ -46,6 +46,7 @@ export const ExitIntent = (options = {}) => {
     };
 
     addEvent('mousemove', throttle(mouseDidMove, config.eventThrottle));
+    addEvent('touchstart', throttle(mouseDidMove, config.eventThrottle));
 
     return removeEvents;
   })();

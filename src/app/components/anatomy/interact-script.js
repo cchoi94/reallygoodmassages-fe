@@ -162,7 +162,7 @@ function anaaddEvent(id, relationId) {
           .html(anaconfig[id].hover);
         $('#anatip').css({ left: x, top: y });
       });
-      _obj.on('touchend', function() {
+      _obj.on('touchstart', function() {
         $('#' + id).css({ fill: 'rgba(255, 0, 0, 0)' });
         if (anaconfig[id].target === 'new_window') {
           window.open(anaconfig[id].url);
