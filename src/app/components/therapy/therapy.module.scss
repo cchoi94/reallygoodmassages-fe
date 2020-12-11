@@ -91,4 +91,9 @@ $gutter: 8px;
   .header {
     margin: $gutter 0;
   }
+  .excercisesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
