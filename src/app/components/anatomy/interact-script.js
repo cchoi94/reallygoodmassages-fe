@@ -143,7 +143,7 @@ function anaaddEvent(id, relationId) {
     });
     // if (isTouchEnabled()) {
     _obj.on('touchstart', function(e) {
-      var touch = e.originalEvent.touches[0];
+      var touch = e.originalEvent.changedTouches[0];
       var x = touch.pageX + 10,
         y = touch.pageY + 15;
       var tipw = $('#anatip').outerWidth(),
