@@ -1,13 +1,13 @@
 import $ from 'jquery';
 import { anaconfig } from './anatomySettings/anatomy-settings';
 /* eslint-disable */
-// function isTouchEnabled() {
-//   return (
-//     'ontouchstart' in window ||
-//     navigator.MaxTouchPoints > 0 ||
-//     navigator.msMaxTouchPoints > 0
-//   );
-// }
+function isTouchEnabled() {
+  return (
+    'ontouchstart' in window ||
+    navigator.MaxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
 
 const resetZoom = () => {
   $('#basea').css({
@@ -141,52 +141,52 @@ function anaaddEvent(id, relationId) {
           : y;
       $('#anatip').css({ left: x, top: y });
     });
-    // if (isTouchEnabled()) {
-    _obj.on('touchstart', function(e) {
-      var touch = e.originalEvent.changedTouches[0];
-      var x = touch.pageX + 10,
-        y = touch.pageY + 15;
-      var tipw = $('#anatip').outerWidth(),
-        tiph = $('#anatip').outerHeight(),
-        x =
-          x + tipw > $(document).scrollLeft() + $(window).width()
-            ? x - tipw - 20 * 2
-            : x;
-      y =
-        y + tiph > $(document).scrollTop() + $(window).height()
-          ? $(document).scrollTop() + $(window).height() - tiph - 10
-          : y;
-      $('#' + id).css({ fill: 'rgba(255, 0, 0, 0.7)' });
-      $('#anatip')
-        .show()
-        .html(anaconfig[id].hover);
-      $('#anatip').css({ left: x, top: y });
-    });
-    _obj.on('touchstart', function() {
-      $('#' + id).css({ fill: 'rgba(255, 0, 0, 0)' });
-      if (anaconfig[id].target === 'new_window') {
-        window.open(anaconfig[id].url);
-      } else if (anaconfig[id].target === 'same_window') {
-        window.parent.location.href = anaconfig[id].url;
-      } else if (anaconfig[id].target === 'modal') {
-        $(anaconfig[id].url).modal('show');
-      } else if (anaconfig[id].target === 'zoom') {
-        const cor = anaconfig[id].position.split(' ');
-        $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
-          transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
-          transition: '1s',
-        });
-        $('#anatomyBackBtn').css({
-          display: 'block',
-        });
-        $('#anaspotsa').show();
-        $('#instructions').hide();
-        $('#anatomyBackgroundText').hide();
-        $('#anatomyWrapper').css({
-          overflow: 'hidden',
-        });
-      }
-    });
-    // }
+    if (isTouchEnabled()) {
+      _obj.on('touchstart', function(e) {
+        var touch = e.originalEvent.touches[0];
+        var x = touch.pageX + 10,
+          y = touch.pageY + 15;
+        var tipw = $('#anatip').outerWidth(),
+          tiph = $('#anatip').outerHeight(),
+          x =
+            x + tipw > $(document).scrollLeft() + $(window).width()
+              ? x - tipw - 20 * 2
+              : x;
+        y =
+          y + tiph > $(document).scrollTop() + $(window).height()
+            ? $(document).scrollTop() + $(window).height() - tiph - 10
+            : y;
+        $('#' + id).css({ fill: 'rgba(255, 0, 0, 0.7)' });
+        $('#anatip')
+          .show()
+          .html(anaconfig[id].hover);
+        $('#anatip').css({ left: x, top: y });
+      });
+      _obj.on('touchend', function() {
+        $('#' + id).css({ fill: 'rgba(255, 0, 0, 0)' });
+        if (anaconfig[id].target === 'new_window') {
+          window.open(anaconfig[id].url);
+        } else if (anaconfig[id].target === 'same_window') {
+          window.parent.location.href = anaconfig[id].url;
+        } else if (anaconfig[id].target === 'modal') {
+          $(anaconfig[id].url).modal('show');
+        } else if (anaconfig[id].target === 'zoom') {
+          const cor = anaconfig[id].position.split(' ');
+          $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
+            transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
+            transition: '1s',
+          });
+          $('#anatomyBackBtn').css({
+            display: 'block',
+          });
+          $('#anaspotsa').show();
+          $('#instructions').hide();
+          $('#anatomyBackgroundText').hide();
+          $('#anatomyWrapper').css({
+            overflow: 'hidden',
+          });
+        }
+      });
+    }
   }
 }
