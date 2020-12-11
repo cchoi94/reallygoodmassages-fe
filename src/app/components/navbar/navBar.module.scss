@@ -33,6 +33,7 @@ $gutter: 8px;
   a {
     text-decoration: none;
     font-weight: 700;
+    color: $black;
   }
   a:not(:last-child) {
     margin-right: $gutter * 3;
