@@ -62,6 +62,7 @@ export const ExitIntentModal: React.FC = () => {
       show={showModal}
       centered
       backdrop='static'
+      backdropClassName={cls.modalBackDrop}
       onHide={() => setShowModal(false)}
     >
       <button

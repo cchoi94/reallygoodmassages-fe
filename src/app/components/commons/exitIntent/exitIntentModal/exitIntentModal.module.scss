@@ -5,6 +5,11 @@ $gutter: 8px;
   border: none;
 }
 
+.modalBackDrop {
+  background: rgba(43, 43, 43, 0.9) !important;
+  opacity: 1 !important;
+}
+
 .closeBtn {
   color: #ffffff;
   display: flex;
