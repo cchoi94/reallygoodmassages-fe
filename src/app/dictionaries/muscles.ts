@@ -10,4 +10,11 @@ export enum Muscles {
   SERRATUSANTERIOR = 'serratusAnterior',
   TERESMAJOR = 'teresMajor',
   TRAPEZIUS = 'trapezius',
+  RECTUSABDOMINIS = 'rectusAbdominis',
+  GLUTEUSMAXIMUS = 'gluteusMaximus',
+  QUADRATUSLUMBORUM = 'quadratusLumborum',
+  SUBSCAPULARIS = 'Subscapularis',
+  ILIOPSOAS = 'Iliopsoas',
+  GLUTEUSMEDIUS = 'gluteusMedius',
+  CLAVICULARPECMAJOR = 'clavicularPecMajor',
 }

@@ -1,61 +1,82 @@
 import { Muscles } from './muscles';
-import Sternocleidomastertoid from 'app/assets/images/exercises/sternocleidomastertoid.svg';
-import Infraspinatus from 'app/assets/images/exercises/infraspinatus.svg';
-import Intercostal from 'app/assets/images/exercises/intercostal.svg';
-import LatissimusDorsi from 'app/assets/images/exercises/latissimusDorsi.svg';
-import Trapezius from 'app/assets/images/exercises/trapezius.svg';
-import Scalene from 'app/assets/images/exercises/scalene.svg';
-import Teresmajor from 'app/assets/images/exercises/teresMajor.svg';
-import SerratusAnterior from 'app/assets/images/exercises/serratusAnterior.svg';
-import Levator from 'app/assets/images/exercises/levator.svg';
-import Supraspinatus from 'app/assets/images/exercises/supraspinatus.svg';
-import Rhomboid from 'app/assets/images/exercises/rhomboid.svg';
 
 //sides and front
 
+const generateVideoLink = (id: string) => `https://streamable.com/e/${id}`;
+const generateThumbnailLink = (id: string) =>
+  `https://thumbs-east.streamable.com/image/${id}.jpg`;
+
 export const MuscleExerciseGifs: any = {
   [Muscles.INFRASPINATUS]: {
-    gif: 'https://streamable.com/e/lqncdz',
-    thumbnail: Infraspinatus,
+    gif: generateVideoLink('lqncdz'),
+    thumbnail: generateThumbnailLink('lqncdz'),
   },
   [Muscles.INTERCOSTAL]: {
-    gif: 'https://streamable.com/e/qudolc',
-    thumbnail: Intercostal,
+    gif: generateVideoLink('qudolc'),
+    thumbnail: generateThumbnailLink('qudolc'),
   },
   [Muscles.LATISSIMUSDORSI]: {
-    gif: 'https://streamable.com/e/xgk7rg',
-    thumbnail: LatissimusDorsi,
+    gif: generateVideoLink('xgk7rg'),
+    thumbnail: generateThumbnailLink('xgk7rg'),
   },
   [Muscles.TRAPEZIUS]: {
-    gif: 'https://streamable.com/e/rdpeag',
-    thumbnail: Trapezius,
+    gif: generateVideoLink('rdpeag'),
+    thumbnail: generateThumbnailLink('rdpeag'),
   },
   [Muscles.SCALENE]: {
-    gif: 'https://streamable.com/e/ma2jtk',
-    thumbnail: Scalene,
+    gif: generateVideoLink('ma2jtk'),
+    thumbnail: generateThumbnailLink('ma2jtk'),
   },
   [Muscles.TERESMAJOR]: {
-    gif: 'https://streamable.com/e/zvn2js',
-    thumbnail: Teresmajor,
+    gif: generateVideoLink('zvn2js'),
+    thumbnail: generateThumbnailLink('zvn2js'),
   },
   [Muscles.SERRATUSANTERIOR]: {
-    gif: 'https://streamable.com/e/e5v6he',
-    thumbnail: SerratusAnterior,
+    gif: generateVideoLink('e5v6he'),
+    thumbnail: generateThumbnailLink('e5v6he'),
   },
   [Muscles.LEVATOR]: {
-    gif: 'https://streamable.com/e/chpa05',
-    thumbnail: Levator,
+    gif: generateVideoLink('chpa05'),
+    thumbnail: generateThumbnailLink('chpa05'),
   },
   [Muscles.SUPRASPINATUS]: {
-    gif: 'https://streamable.com/e/u142s5',
-    thumbnail: Supraspinatus,
+    gif: generateVideoLink('u142s5'),
+    thumbnail: generateThumbnailLink('u142s5'),
   },
   [Muscles.RHOMBOID]: {
-    gif: 'https://streamable.com/e/uj8xa0',
-    thumbnail: Rhomboid,
+    gif: generateVideoLink('uj8xa0'),
+    thumbnail: generateThumbnailLink('uj8xa0'),
   },
   [Muscles.STERNOCLEIDOMASTERTOID]: {
-    gif: 'https://streamable.com/e/i2wph9',
-    thumbnail: Sternocleidomastertoid,
+    gif: generateVideoLink('i2wph9'),
+    thumbnail: generateThumbnailLink('i2wph9'),
+  },
+  [Muscles.SUBSCAPULARIS]: {
+    gif: generateVideoLink('484tqm'),
+    thumbnail: generateThumbnailLink('484tqm'),
+  },
+  [Muscles.RECTUSABDOMINIS]: {
+    gif: generateVideoLink('vqtfij'),
+    thumbnail: generateThumbnailLink('vqtfij'),
+  },
+  [Muscles.GLUTEUSMAXIMUS]: {
+    gif: generateVideoLink('mwsk85'),
+    thumbnail: generateThumbnailLink('mwsk85'),
+  },
+  [Muscles.QUADRATUSLUMBORUM]: {
+    gif: generateVideoLink('hbdyy4'),
+    thumbnail: generateThumbnailLink('hbdyy4'),
+  },
+  [Muscles.ILIOPSOAS]: {
+    gif: generateVideoLink('w4ys0r'),
+    thumbnail: generateThumbnailLink('w4ys0r'),
+  },
+  [Muscles.GLUTEUSMEDIUS]: {
+    gif: generateVideoLink('qoykwz'),
+    thumbnail: generateThumbnailLink('qoykwz'),
+  },
+  [Muscles.CLAVICULARPECMAJOR]: {
+    gif: generateVideoLink('xfspi3'),
+    thumbnail: generateThumbnailLink('xfspi3'),
   },
 };
