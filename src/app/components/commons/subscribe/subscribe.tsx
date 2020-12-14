@@ -17,7 +17,14 @@ export const Subscribe: React.FC<OwnProps> = ({
   border = false,
   onSuccess,
 }) => {
-  const { email, setEmail, error, isLoading, onSubmit } = useSubscribe({
+  const {
+    email,
+    setEmail,
+    error,
+    isLoading,
+    onSubmit,
+    isSuccess,
+  } = useSubscribe({
     onSuccess,
   });
 
@@ -48,6 +55,14 @@ export const Subscribe: React.FC<OwnProps> = ({
         </Button>
       </form>
       <p className={cls.errMessage}>{error}</p>
+      {isSuccess ? (
+        <p className={cls.successMessage}>
+          <span role='img' aria-label='email emoji'>
+            💌
+          </span>
+          Thanks for subscribing
+        </p>
+      ) : null}
     </div>
   );
 };

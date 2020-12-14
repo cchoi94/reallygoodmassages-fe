@@ -44,9 +44,17 @@ $gutter: 8px;
   color: #ffffff;
 }
 
-.errMessage {
+.errMessage,
+.successMessage {
   margin-top: $gutter;
+}
+
+.errMessage {
   color: $error;
+}
+
+.successMessage {
+  color: $success;
 }
 
 @media (max-width: 640px) {
