@@ -8,8 +8,6 @@ const inFifteenMinutes = new Date(new Date().getTime() + 5 * 60 * 1000);
 export const useExitIntent = () => {
   const [showModal, setShowModal] = useState(false);
   const [screen, setScreen] = useState<number>(0);
-  const isExitIntentModalSeen =
-    Cookie.get(exitIntentModalSeenCookieString) === 'true';
 
   const onSuccessFulSubscription = (value: boolean) =>
     value === true ? setScreen(1) : null;
@@ -19,16 +17,14 @@ export const useExitIntent = () => {
       threshold: 30,
       eventThrottle: 100,
       onExitIntent: () => {
-        if (!isExitIntentModalSeen) {
-          setShowModal(true);
-        }
+        setShowModal(true);
       },
     });
 
     return () => {
       removeExitIntent();
     };
-  }, [showModal, isExitIntentModalSeen]);
+  }, [showModal]);
 
   useEffect(() => {
     if (showModal) {
