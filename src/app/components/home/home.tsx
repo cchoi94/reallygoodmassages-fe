@@ -51,7 +51,7 @@ export const Home: React.FC = () => (
                   Follow the animated gifs to rid of yourself of these pains.
                 </li>
               </ul>
-              <p className={cls.emoBullet}>
+              <div className={cls.emoBullet}>
                 <span className={cls.starEmo} role='img' aria-label='star'>
                   ⭐️
                 </span>{' '}
@@ -60,7 +60,7 @@ export const Home: React.FC = () => (
                   know if these technique are effective for you. We’d love to
                   learn and continue to improve on the library.
                 </p>
-              </p>
+              </div>
             </div>
           </div>
         </SideDescription>
