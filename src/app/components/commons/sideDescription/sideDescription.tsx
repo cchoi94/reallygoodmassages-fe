@@ -44,6 +44,7 @@ export const SideDescription: React.FC<OwnProps> = ({
           [cls.hide]: !isSideDescriptionShown,
         })}
         onMouseLeave={() => setIsSideDescriptionShown(false)}
+        onClick={() => setIsSideDescriptionShown(false)}
       >
         {children}
       </div>

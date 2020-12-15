@@ -172,14 +172,15 @@ function anaaddEvent(id, relationId) {
           $(anaconfig[id].url).modal('show');
         } else if (anaconfig[id].target === 'zoom') {
           const cor = anaconfig[id].position.split(' ');
-          $(anaconfig[id].isFrontFacing ? '#basea' : '#baseb').css({
-            transform: `scale(5) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
+          $(anaconfig[id].isFrontFacing ? '#baseb' : '#basea').css({
+            transform: `scale(3) translateX(${cor[0]}) translateY(${cor[1]})`, // set zoom
             transition: '1s',
           });
           $('#anatomyBackBtn').css({
             display: 'block',
           });
           $('#anaspotsa').show();
+          $('#anaspotsb').show();
           $('#instructions').hide();
           $('#anatomyBackgroundText').hide();
           $('#anatomyWrapper').css({
