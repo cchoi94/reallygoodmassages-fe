@@ -57,6 +57,19 @@ export const NavBar: React.FC = () => {
         <a onClick={() => setIsHambugerMenuOpen(false)} href='/#about'>
           About
         </a>
+        <a
+          href='https://www.producthunt.com/posts/really-good-massages?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-really-good-massages'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <img
+            src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=279302&theme=light'
+            alt='Really Good Massages - Alleviating muscle pain with short and simple DIY massages. | Product Hunt'
+            style={{ width: '160px', height: '38px' }}
+            width='250'
+            height='54'
+          />
+        </a>
       </div>
     </div>
   );

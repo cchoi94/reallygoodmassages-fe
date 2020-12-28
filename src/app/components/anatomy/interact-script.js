@@ -43,7 +43,7 @@ const resetZoom = () => {
 
 $(document).ready(function() {
   $('#anaspotsa').hide();
-  $('#anaspotsb').hide();
+  // $('#anaspotsb').hide();
   $('#baseb')
     .hide()
     .animate({ opacity: '0' }, 100);
