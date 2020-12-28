@@ -54,6 +54,7 @@ export const ExitIntentModal: React.FC = () => {
     onSuccessFulSubscription,
     showModal,
     setShowModal,
+    onSubscriptionExit,
   } = useExitIntent();
 
   return (
@@ -67,7 +68,7 @@ export const ExitIntentModal: React.FC = () => {
     >
       <button
         className={classNames(cls.closeBtn, 'btn')}
-        onClick={() => setShowModal(false)}
+        onClick={() => onSubscriptionExit()}
       >
         x
       </button>

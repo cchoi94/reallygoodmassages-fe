@@ -13,6 +13,13 @@ export const useExitIntent = () => {
   const onSuccessFulSubscription = (value: boolean) =>
     value === true ? setScreen(1) : null;
 
+  const onSubscriptionExit = () => {
+    setShowModal(false);
+    return Cookie.set(exitIntentModalSeenCookieString, 'true', {
+      expires: inEightMinutes,
+    });
+  };
+
   useEffect(() => {
     const removeExitIntent = ExitIntent({
       threshold: 30,
@@ -26,14 +33,6 @@ export const useExitIntent = () => {
   }, [showModal, showPopupIntent]);
 
   useEffect(() => {
-    if (showModal) {
-      Cookie.set(exitIntentModalSeenCookieString, 'true', {
-        expires: inEightMinutes,
-      });
-    }
-  }, [showModal]);
-
-  useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopupIntent(true);
     }, 5000);
@@ -43,6 +42,7 @@ export const useExitIntent = () => {
   return {
     showModal,
     setShowModal,
+    onSubscriptionExit,
     screen,
     onSuccessFulSubscription,
   };

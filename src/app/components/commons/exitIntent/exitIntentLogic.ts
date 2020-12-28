@@ -1,7 +1,7 @@
 import throttle from 'lodash/throttle';
 import * as Cookie from 'js-cookie';
 
-const exitIntentModalSeenCookieString = 'exit_intent_modal_seen';
+export const exitIntentModalSeenCookieString = 'exit_intent_modal_seen';
 
 export const ExitIntent = (options = {}) => {
   const defaultOptions = {

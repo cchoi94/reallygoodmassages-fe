@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import axios from 'app/requests/axiosInstance';
+import * as Cookie from 'js-cookie';
+import { exitIntentModalSeenCookieString } from 'app/components/commons/exitIntent/exitIntentLogic';
 
 export const useSubscribe = ({ onSuccess }: any) => {
   const [email, setEmail] = useState<string>('');
@@ -22,6 +24,9 @@ export const useSubscribe = ({ onSuccess }: any) => {
       }
       setEmail('');
       setIsSuccess(true);
+      Cookie.set(exitIntentModalSeenCookieString, 'true', {
+        expires: 30,
+      });
     } catch (err) {
       setError(err.response.data);
     } finally {
