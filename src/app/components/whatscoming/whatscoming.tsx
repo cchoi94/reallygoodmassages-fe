@@ -30,7 +30,7 @@ export const Whatscoming: React.FC = () => {
           </div>
         </div>
         <div className={cls.whatsComingItem}>
-          <p className={cls.title}>Elbow Pain - Dec 25</p>
+          <p className={cls.title}>Elbow Pain - Jan 8</p>
           <div className={cls.emoStarDivider}>
             <span role='img' aria-label='star emoji'>
               ⭐️
@@ -38,15 +38,7 @@ export const Whatscoming: React.FC = () => {
           </div>
         </div>
         <div className={cls.whatsComingItem}>
-          <p className={cls.title}>Wrist Pain - Jan 1</p>
-          <div className={cls.emoStarDivider}>
-            <span role='img' aria-label='star emoji'>
-              ⭐️
-            </span>
-          </div>
-        </div>
-        <div className={cls.whatsComingItem}>
-          <p className={cls.title}>Wrist Pain - Jan 1</p>
+          <p className={cls.title}>Wrist Pain - Jan 15</p>
         </div>
       </div>
     </div>
