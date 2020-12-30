@@ -34,7 +34,7 @@ export const useTherapy = () => {
   const [selectedExercise, setSelectedExercise] = useState(exerciseList[0]);
 
   useEffect(() => {
-    window.analytics.track('Therapy Viewed ', {
+    window.analytics.track('Therapy Viewed', {
       area,
       exercises,
     });
