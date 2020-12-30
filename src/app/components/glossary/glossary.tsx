@@ -41,9 +41,9 @@ export const Glossary: React.FC = () => {
         <p className={cls.title}>Trigger point</p>
         <p className={'description'}>
           A highly irritable localized spot of exquisite tenderness in a nodule
-          in the muscle tissues. It feel like knot or a small lump to the touch.
-          It can range in size from a pinhead to a pea. Trigger points always
-          hurt when pressed on.
+          in the muscle tissues. It feel like a knot or a small lump to the
+          touch. The sizes can range from a pinhead to a pea. Trigger points
+          always hurt when pressed on.
         </p>
       </div>
     </div>
