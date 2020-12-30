@@ -1,6 +1,12 @@
 import { useLocation } from 'react-router-dom';
 import { MuscleExerciseGifs } from 'app/dictionaries/muscleExerciseGifs';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+declare global {
+  interface Window {
+    analytics: any;
+  }
+}
 
 interface ExerciseList {
   name: string;
@@ -22,9 +28,17 @@ const getExerciseList = (exercises: string[]) =>
 
 export const useTherapy = () => {
   const query = useQuery();
+  const area: string = query.get('area')!;
   const exercises: string[] = query.get('exercises')!.split(',');
   const exerciseList = getExerciseList(exercises);
   const [selectedExercise, setSelectedExercise] = useState(exerciseList[0]);
+
+  useEffect(() => {
+    window.analytics.track('Therapy Viewed ', {
+      area,
+      exercises,
+    });
+  }, [area, exercises]);
 
   return {
     exerciseList,
