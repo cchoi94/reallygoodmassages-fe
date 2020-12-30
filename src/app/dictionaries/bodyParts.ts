@@ -1,7 +1,10 @@
 export enum BodyParts {
-  NECK = 'neck',
-  LEFTSHOULDER = 'leftShoulder',
-  RIGHTSHOULDER = 'rightShoulder',
+  BACKNECK = 'backNeck',
+  FRONTNECK = 'frontNeck',
+  BACKSHOULDER = 'backShoulder',
+  FRONTSHOULDER = 'frontShoulder',
+  UPPERBACK = 'upperBack',
+  LOWERBACK = 'lowerBack',
+  GLUTES = 'glutes',
   CHEST = 'chest',
-  LOIN = 'loin',
 }

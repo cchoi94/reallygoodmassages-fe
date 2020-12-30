@@ -1,6 +1,7 @@
 import { SpotColors } from 'app/components/anatomy/spotSettings/spotColors';
 import { Path } from 'app/Path';
 import { Muscles } from 'app/dictionaries/muscles';
+import { BodyParts } from 'app/dictionaries/bodyParts';
 
 interface ConfigAttributes {
   hover?: string;
@@ -40,6 +41,16 @@ const {
   GLUTEUSMEDIUS,
   CLAVICULARPECMAJOR,
 } = Muscles;
+const {
+  BACKNECK,
+  FRONTNECK,
+  BACKSHOULDER,
+  FRONTSHOULDER,
+  UPPERBACK,
+  LOWERBACK,
+  GLUTES,
+  CHEST,
+} = BodyParts;
 /*============================================================================================*/
 /*===== In the following section you can add/remove/modify the spots of the front side =======*/
 /*============================================================================================*/
@@ -55,7 +66,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${STERNOCLEIDOMASTERTOID}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${FRONTNECK}&exercises=${STERNOCLEIDOMASTERTOID}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -67,7 +78,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${STERNOCLEIDOMASTERTOID}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${FRONTNECK}&exercises=${STERNOCLEIDOMASTERTOID}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -79,11 +90,11 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${STERNOCLEIDOMASTERTOID}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${FRONTNECK}&exercises=${STERNOCLEIDOMASTERTOID}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
-    // Left Arm
+    // Left shoulder
     {
       pos_X: 230, //check the X, Y coordinates guide in the documentation
       pos_Y: 280,
@@ -91,7 +102,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${INFRASPINATUS},${SUPRASPINATUS},${SCALENE},${LATISSIMUSDORSI}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${FRONTSHOULDER}&exercises=${INFRASPINATUS},${SUPRASPINATUS},${SCALENE},${LATISSIMUSDORSI}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -102,7 +113,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${INFRASPINATUS},${SUPRASPINATUS},${SCALENE},${CLAVICULARPECMAJOR}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${FRONTSHOULDER}&exercises=${INFRASPINATUS},${SUPRASPINATUS},${SCALENE},${CLAVICULARPECMAJOR}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -114,7 +125,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${SERRATUSANTERIOR},${INTERCOSTAL}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${CHEST}&exercises=${SERRATUSANTERIOR},${INTERCOSTAL}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -125,7 +136,7 @@ export const spotsConfigA: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${LATISSIMUSDORSI}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${CHEST}&exercises=${LATISSIMUSDORSI}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -147,11 +158,11 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${TRAPEZIUS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${BACKNECK}&exercises=${TRAPEZIUS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
-    // Left Arm
+    // Left shoulder
     {
       pos_X: 210, //check the X, Y coordinates guide in the documentation
       pos_Y: 280,
@@ -159,7 +170,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${INFRASPINATUS},${SUPRASPINATUS},${SCALENE},${LATISSIMUSDORSI}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${BACKSHOULDER}&exercises=${INFRASPINATUS},${SUPRASPINATUS},${SCALENE},${LATISSIMUSDORSI}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -170,11 +181,11 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${LATISSIMUSDORSI},${SCALENE},${SUPRASPINATUS},${SUBSCAPULARIS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${BACKSHOULDER}&exercises=${LATISSIMUSDORSI},${SCALENE},${SUPRASPINATUS},${SUBSCAPULARIS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
-    // Right Arm
+    // Right shoulder
     {
       pos_X: 570, //check the X, Y coordinates guide in the documentation
       pos_Y: 290,
@@ -182,7 +193,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${SUPRASPINATUS},${SUBSCAPULARIS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${BACKSHOULDER}&exercises=${SUPRASPINATUS},${SUBSCAPULARIS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -194,7 +205,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${RHOMBOID},${SCALENE}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${RHOMBOID},${SCALENE}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -205,7 +216,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${TERESMAJOR},${LATISSIMUSDORSI}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${TERESMAJOR},${LATISSIMUSDORSI}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -216,7 +227,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${TERESMAJOR},${LATISSIMUSDORSI},${RECTUSABDOMINIS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${TERESMAJOR},${LATISSIMUSDORSI},${RECTUSABDOMINIS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -228,7 +239,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${LEVATOR}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${LEVATOR}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -239,7 +250,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${RHOMBOID}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${RHOMBOID}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -250,7 +261,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${SERRATUSANTERIOR}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${SERRATUSANTERIOR}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -261,7 +272,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${SERRATUSANTERIOR},${INTERCOSTAL}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${UPPERBACK}&exercises=${SERRATUSANTERIOR},${INTERCOSTAL}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -273,7 +284,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${LATISSIMUSDORSI}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${LOWERBACK}&exercises=${LATISSIMUSDORSI}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -284,7 +295,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${LATISSIMUSDORSI},${RECTUSABDOMINIS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${LOWERBACK}&exercises=${LATISSIMUSDORSI},${RECTUSABDOMINIS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -295,7 +306,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${RECTUSABDOMINIS},${ILIOPSOAS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${LOWERBACK}&exercises=${RECTUSABDOMINIS},${ILIOPSOAS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -307,7 +318,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${ILIOPSOAS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${LOWERBACK}&exercises=${ILIOPSOAS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -319,7 +330,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${GLUTEUSMEDIUS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${GLUTES}&exercises=${GLUTEUSMEDIUS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -331,7 +342,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${QUADRATUSLUMBORUM}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${GLUTES}&exercises=${QUADRATUSLUMBORUM}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -342,7 +353,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${GLUTEUSMAXIMUS},${GLUTEUSMEDIUS},${QUADRATUSLUMBORUM}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${GLUTES}&exercises=${GLUTEUSMAXIMUS},${GLUTEUSMEDIUS},${QUADRATUSLUMBORUM}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -353,7 +364,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${GLUTEUSMAXIMUS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${GLUTES}&exercises=${GLUTEUSMAXIMUS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -365,7 +376,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${GLUTEUSMEDIUS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${GLUTES}&exercises=${GLUTEUSMEDIUS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
@@ -376,7 +387,7 @@ export const spotsConfigB: Pins = {
       outline, //outline color of the pin
       upColor, //color of the pin when drawing load
       overColor, //color of the pin when mouse hover
-      url: `${Path.THERAPY}?exercises=${GLUTEUSMEDIUS}`, //link to any webpage
+      url: `${Path.THERAPY}?area=${GLUTES}&exercises=${GLUTEUSMEDIUS}`, //link to any webpage
       target: 'same_window', // use "new_window", "same_window", "modal", or "none"
       enabled: true, //true/false to activate/deactivate this pin
     },
