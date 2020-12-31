@@ -7,6 +7,9 @@ import classNames from 'classnames';
 import { useNavBar } from './useNavBar';
 import LogoWithText from 'app/assets/images/icons/logoWithText.svg';
 import LogoIcon from 'app/assets/images/icons/logo.svg';
+import InstagramIcon from 'app/assets/images/icons/instagram.svg';
+import FacebookIcon from 'app/assets/images/icons/facebook.png';
+import TwitterIcon from 'app/assets/images/icons/twitter.svg';
 
 import cls from './navBar.module.scss';
 
@@ -66,10 +69,43 @@ export const NavBar: React.FC = () => {
             src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=279302&theme=light'
             alt='Really Good Massages - Alleviating muscle pain with short and simple DIY massages. | Product Hunt'
             style={{ width: '160px', height: '36px' }}
-            width='250'
-            height='54'
           />
         </a>
+        <div className={cls.socialIcons}>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://www.instagram.com/reallygoodmassages/'
+          >
+            <img
+              className={cls.icon}
+              src={InstagramIcon}
+              alt='instagram icon with link'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://www.facebook.com/reallygoodmassages'
+          >
+            <img
+              className={cls.icon}
+              src={FacebookIcon}
+              alt='facebook icon with link'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://twitter.com/RGMassages'
+          >
+            <img
+              className={cls.icon}
+              src={TwitterIcon}
+              alt='facebook icon with link'
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
