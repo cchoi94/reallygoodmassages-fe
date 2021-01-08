@@ -33,10 +33,12 @@ export const useExitIntent = () => {
   }, [showModal, showPopupIntent]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopupIntent(true);
-    }, 5000);
-    return () => clearTimeout(timer);
+    if (!Cookie.get(exitIntentModalSeenCookieString)) {
+      const timer = setTimeout(() => {
+        setShowPopupIntent(true);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return {
