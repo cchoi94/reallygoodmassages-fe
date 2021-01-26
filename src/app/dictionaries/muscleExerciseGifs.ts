@@ -7,6 +7,18 @@ const generateThumbnailLink = (id: string) =>
   `https://thumbs-east.streamable.com/image/${id}.jpg`;
 
 export const MuscleExerciseGifs: any = {
+  [Muscles.TEMPORALIS]: {
+    gif: generateVideoLink('gboq69'),
+    thumbnail: generateThumbnailLink('gboq69'),
+  },
+  [Muscles.SUBOCCIPITAL]: {
+    gif: generateVideoLink('92hbl9'),
+    thumbnail: generateThumbnailLink('92hbl9'),
+  },
+  [Muscles.FRONTALIS]: {
+    gif: generateVideoLink('6yfd66'),
+    thumbnail: generateThumbnailLink('6yfd66'),
+  },
   [Muscles.INFRASPINATUS]: {
     gif: generateVideoLink('lqncdz'),
     thumbnail: generateThumbnailLink('lqncdz'),

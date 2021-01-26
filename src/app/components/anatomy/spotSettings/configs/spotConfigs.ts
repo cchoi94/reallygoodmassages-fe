@@ -22,6 +22,9 @@ interface Pins {
 
 const { upColor, outline, overColor } = SpotColors;
 const {
+  FRONTALIS,
+  SUBOCCIPITAL,
+  TEMPORALIS,
   INFRASPINATUS,
   INTERCOSTAL,
   LATISSIMUSDORSI,
@@ -42,6 +45,7 @@ const {
   CLAVICULARPECMAJOR,
 } = Muscles;
 const {
+  FRONTHEAD,
   BACKNECK,
   FRONTNECK,
   BACKSHOULDER,
@@ -58,6 +62,62 @@ const {
 
 export const spotsConfigA: Pins = {
   pins: [
+    // head
+    {
+      pos_X: 345, //check the X, Y coordinates guide in the documentation
+      pos_Y: 65,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${TEMPORALIS}&exercises=${FRONTALIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 375, //check the X, Y coordinates guide in the documentation
+      pos_Y: 80,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${FRONTHEAD}&exercises=${FRONTALIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 345, //check the X, Y coordinates guide in the documentation
+      pos_Y: 100,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${FRONTHEAD}&exercises=${TEMPORALIS},${SUBOCCIPITAL}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 355, //check the X, Y coordinates guide in the documentation
+      pos_Y: 125,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${FRONTHEAD}&exercises=${SUBOCCIPITAL}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 390, //check the X, Y coordinates guide in the documentation
+      pos_Y: 135,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${FRONTHEAD}&exercises=${TEMPORALIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
     // Left Neck
     {
       pos_X: 375, //check the X, Y coordinates guide in the documentation
