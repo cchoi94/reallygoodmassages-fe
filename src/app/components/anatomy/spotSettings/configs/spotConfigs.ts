@@ -23,6 +23,7 @@ interface Pins {
 const { upColor, outline, overColor } = SpotColors;
 const {
   FRONTALIS,
+  SEMISPINALISCAPITIS,
   SUBOCCIPITAL,
   TEMPORALIS,
   INFRASPINATUS,
@@ -46,6 +47,7 @@ const {
 } = Muscles;
 const {
   FRONTHEAD,
+  BACKHEAD,
   BACKNECK,
   FRONTNECK,
   BACKSHOULDER,
@@ -211,6 +213,51 @@ export const spotsConfigA: Pins = {
 export const spotsConfigB: Pins = {
   pins: [
     // Head
+    {
+      pos_X: 343, //check the X, Y coordinates guide in the documentation
+      pos_Y: 90,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${BACKHEAD}&exercises=${SUBOCCIPITAL},${SEMISPINALISCAPITIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 400, //check the X, Y coordinates guide in the documentation
+      pos_Y: 80,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${BACKHEAD}&exercises=${SEMISPINALISCAPITIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 430, //check the X, Y coordinates guide in the documentation
+      pos_Y: 120,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${BACKHEAD}&exercises=${SEMISPINALISCAPITIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    {
+      pos_X: 460, //check the X, Y coordinates guide in the documentation
+      pos_Y: 70,
+      size: 16, //size of the pin
+      outline, //outline color of the pin
+      upColor, //color of the pin when drawing load
+      overColor, //color of the pin when mouse hover
+      url: `${Path.THERAPY}?area=${BACKHEAD}&exercises=${FRONTALIS}`, //link to any webpage
+      target: 'same_window', // use "new_window", "same_window", "modal", or "none"
+      enabled: true, //true/false to activate/deactivate this pin
+    },
+    // Neck
     {
       pos_X: 373, //check the X, Y coordinates guide in the documentation
       pos_Y: 140,

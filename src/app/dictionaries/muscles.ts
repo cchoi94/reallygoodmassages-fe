@@ -1,5 +1,6 @@
 export enum Muscles {
   TEMPORALIS = 'temporalis',
+  SEMISPINALISCAPITIS = 'semispinalisCapitis',
   SUBOCCIPITAL = 'suboccipital',
   FRONTALIS = 'frontalis',
   INFRASPINATUS = 'infraspinatus',

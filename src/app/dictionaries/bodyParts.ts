@@ -1,4 +1,5 @@
 export enum BodyParts {
+  BACKHEAD = 'backHead',
   FRONTHEAD = 'frontHead',
   BACKNECK = 'backNeck',
   FRONTNECK = 'frontNeck',

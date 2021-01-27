@@ -11,6 +11,10 @@ export const MuscleExerciseGifs: any = {
     gif: generateVideoLink('gboq69'),
     thumbnail: generateThumbnailLink('gboq69'),
   },
+  [Muscles.SEMISPINALISCAPITIS]: {
+    gif: generateVideoLink('ciwvhn'),
+    thumbnail: generateThumbnailLink('ciwvhn'),
+  },
   [Muscles.SUBOCCIPITAL]: {
     gif: generateVideoLink('92hbl9'),
     thumbnail: generateThumbnailLink('92hbl9'),
