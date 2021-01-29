@@ -22,8 +22,7 @@
 }
 .gob,
 .goa {
-  fill: #72b8fc;
-  opacity: 0.05;
+  opacity: 0;
   -webkit-transition: fill 0.1s ease;
   -moz-transition: fill 0.1s ease;
   -o-transition: fill 0.1s ease;
@@ -32,7 +31,7 @@
 }
 .gob:hover,
 .goa:hover {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 #anatip {
   font: 14px/16px Trebuchet MS, Helvetica, Arial, sans-serif;
@@ -71,21 +70,21 @@
 }
 @media screen and (max-width: 400px) and (min-width: 321px) {
   #anawrapper svg {
-    height: calc(100vh - 136px);
+    height: calc(100vh - 148px);
   }
 }
 @media screen and (max-width: 480px) and (min-width: 401px) {
   #anawrapper svg {
-    height: calc(100vh - 136px);
+    height: calc(100vh - 148px);
   }
 }
 @media screen and (max-width: 568px) and (min-width: 481px) {
   #anawrapper svg {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 360px);
   }
 }
 @media screen and (min-width: 569px) {
   #anawrapper svg {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 360px);
   }
 }

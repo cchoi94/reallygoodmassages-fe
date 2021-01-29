@@ -29,9 +29,15 @@ $gutter: 8px;
 }
 
 .instructions {
-  margin-top: -$gutter * 5;
+  margin-top: -$gutter * 10;
   font-weight: 700;
   letter-spacing: 0.02em;
+  display: flex;
+  flex-direction: column;
+}
+
+.approvedInstructions {
+  font-size: 24px;
 }
 
 .chevron {
@@ -53,5 +59,11 @@ $gutter: 8px;
   .backgroundText {
     font-size: 3rem;
     top: 0;
+  }
+  .instructions {
+    font-size: 14px;
+  }
+  .approvedInstructions {
+    font-size: 16px;
   }
 }

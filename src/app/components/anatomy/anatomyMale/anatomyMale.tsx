@@ -24,6 +24,9 @@ export const AnatomyMale: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: anatomyMale }}
       />
       <p id='instructions' className={cls.instructions}>
+        <span className={cls.approvedInstructions}>
+          Massage Techniques approved by certified RMT.
+        </span>
         Tell us where you are hurting by clicking on that spot.
       </p>
     </>
