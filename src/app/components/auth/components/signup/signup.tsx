@@ -9,14 +9,14 @@ import classNames from 'classnames';
 
 import cls from '../commons.module.scss';
 
-export const Signin: React.FC = () => {
+export const Signup: React.FC = () => {
   const { signIn } = useAuth();
   return (
     <Form className={cls.container} onSubmit={signIn}>
       <Form.Group controlId='formBasicEmail'>
         <div className={cls.header}>
           <img src={Logo} alt={'really good massages logo'} />
-          <p className={cls.title}>Sign In</p>
+          <p className={cls.title}>Sign Up</p>
         </div>
         <Form.Control required type='email' placeholder='Email' name='email' />
         <Form.Text className='text-muted'>
@@ -42,8 +42,7 @@ export const Signin: React.FC = () => {
       </Button>
       <div>
         <p>
-          Don't have an account yet?{' '}
-          <Link to={Path.SIGNUP}>Create yours here!</Link>
+          Already have an account? <Link to={Path.SIGNIN}>Sign in here!</Link>
         </p>
       </div>
     </Form>

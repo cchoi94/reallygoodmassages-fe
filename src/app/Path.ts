@@ -6,4 +6,6 @@ export enum Path {
   THERAPY = '/therapy',
   SIGNIN = '/signin',
   SIGNOUT = '/signout',
+  CONFIRMSIGNUP = '/confirmSignup',
+  SIGNUP = '/signup',
 }

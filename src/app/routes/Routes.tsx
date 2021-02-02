@@ -5,6 +5,8 @@ import { Home } from '../components/home/home';
 import { Therapy } from 'app/components/therapy/therapy';
 import { Glossary } from 'app/components/glossary/glossary';
 import { Whatscoming } from 'app/components/whatscoming/whatscoming';
+import { Auth } from 'app/components/auth/auth/auth';
+import { Signup } from 'app/components/auth/components/signup/signup';
 
 const Routes = () => {
   return (
@@ -24,7 +26,12 @@ const Routes = () => {
       <Route path={Path.THERAPY}>
         <Therapy />
       </Route>
-      <Route path={Path.SIGNIN}>Sign In</Route>
+      <Route path={Path.SIGNIN}>
+        <Auth />
+      </Route>
+      <Route path={Path.SIGNUP}>
+        <Signup />
+      </Route>
       <Route path={Path.SIGNOUT}>Sign Out</Route>
     </Switch>
   );
