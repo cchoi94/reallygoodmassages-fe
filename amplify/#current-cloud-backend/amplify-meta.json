@@ -1,0 +1,38 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-reallygoodmassages-dev-104829-authRole",
+			"UnauthRoleArn": "arn:aws:iam::809027787927:role/amplify-reallygoodmassages-dev-104829-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::809027787927:role/amplify-reallygoodmassages-dev-104829-authRole",
+			"Region": "us-east-2",
+			"DeploymentBucketName": "amplify-reallygoodmassages-dev-104829-deployment",
+			"UnauthRoleName": "amplify-reallygoodmassages-dev-104829-unauthRole",
+			"StackName": "amplify-reallygoodmassages-dev-104829",
+			"StackId": "arn:aws:cloudformation:us-east-2:809027787927:stack/amplify-reallygoodmassages-dev-104829/de7c3bf0-64a4-11eb-810c-0a95f01e818a",
+			"AmplifyAppId": "d3n4p8r56nbm9c"
+		}
+	},
+	"auth": {
+		"reallygoodmassages930e15d8": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false,
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-reallygoodmassages-dev-104829-deployment/amplify-cfn-templates/auth/reallygoodmassages930e15d8-cloudformation-template.yml",
+				"logicalId": "authreallygoodmassages930e15d8"
+			},
+			"lastPushTimeStamp": "2021-02-01T15:53:41.107Z",
+			"output": {
+				"AppClientSecret": "n16otkd46dsfm2bk6n0k7cjh1b66i6f9b29htp3anjl6cvcuv7c",
+				"UserPoolId": "us-east-2_PTjfkBqmC",
+				"AppClientIDWeb": "a75tad63vpug9hbkal9df3aqv",
+				"AppClientID": "6ktai4potg5e2jaoft7e0uchg8",
+				"IdentityPoolId": "us-east-2:fac152fd-0c1d-4e63-ac03-bfca3af3f6fd",
+				"IdentityPoolName": "reallygoodmassages930e15d8_identitypool_930e15d8__dev",
+				"UserPoolName": "reallygoodmassages930e15d8_userpool_930e15d8"
+			},
+			"lastPushDirHash": "P4N4N95Hp/hdSSudcspaOBQsqGs="
+		}
+	}
+}

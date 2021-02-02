@@ -1,0 +1,43 @@
+@import '../../dictionaries/themes/colors.module.scss';
+
+$gutter: 8px;
+$transition: all 300ms ease-in-out;
+
+.container {
+  position: relative;
+  border-radius: 10px;
+  border: 4px solid $red;
+  padding: $gutter;
+  position: absolute;
+  top: 0;
+  right: -40vw;
+  height: 85vh;
+  width: 40vw;
+  background: #ffffff;
+  margin-top: 108px;
+  transition: $transition;
+  z-index: 100;
+}
+
+.userPanelTab {
+  background: $red;
+  padding: $gutter;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(270deg);
+  left: -64px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.open {
+  right: 0;
+}
