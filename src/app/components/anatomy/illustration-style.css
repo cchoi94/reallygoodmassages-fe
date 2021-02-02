@@ -78,13 +78,13 @@
     height: calc(100vh - 148px);
   }
 }
-@media screen and (max-width: 568px) and (min-width: 481px) {
+@media screen and (max-width: 1265px) and (min-width: 481px) {
   #anawrapper svg {
-    height: calc(100vh - 360px);
+    height: calc(100vh - 200px);
   }
 }
-@media screen and (min-width: 569px) {
+@media screen and (min-width: 1265px) {
   #anawrapper svg {
-    height: calc(100vh - 360px);
+    height: calc(100vh - 300px);
   }
 }
