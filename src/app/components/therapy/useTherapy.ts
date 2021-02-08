@@ -1,6 +1,6 @@
-import { useLocation } from 'react-router-dom';
 import { MuscleExerciseGifs } from 'app/dictionaries/muscleExerciseGifs';
 import { useState, useEffect } from 'react';
+import { useQuery } from 'app/utils/useQuery';
 
 declare global {
   interface Window {
@@ -13,8 +13,6 @@ interface ExerciseList {
   thumbnail?: string;
   gif?: string;
 }
-
-const useQuery = () => new URLSearchParams(useLocation().search);
 
 const getExerciseList = (exercises: string[]) =>
   exercises.map<ExerciseList>(exerciseName => {

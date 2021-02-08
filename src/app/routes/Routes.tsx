@@ -7,6 +7,7 @@ import { Glossary } from 'app/components/glossary/glossary';
 import { Whatscoming } from 'app/components/whatscoming/whatscoming';
 import { Auth } from 'app/components/auth/auth/auth';
 import { Signup } from 'app/components/auth/components/signup/signup';
+import { ConfirmSignup } from 'app/components/auth/components/confirmSignup/confirmSignup';
 
 const Routes = () => {
   return (
@@ -31,6 +32,9 @@ const Routes = () => {
       </Route>
       <Route path={Path.SIGNUP}>
         <Signup />
+      </Route>
+      <Route path={Path.CONFIRMSIGNUP}>
+        <ConfirmSignup />
       </Route>
       <Route path={Path.SIGNOUT}>Sign Out</Route>
     </Switch>

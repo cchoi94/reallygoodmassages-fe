@@ -10,14 +10,19 @@ import classNames from 'classnames';
 import cls from '../commons.module.scss';
 
 export const Signup: React.FC = () => {
-  const { signIn } = useAuth();
+  const { signUp } = useAuth();
   return (
-    <Form className={cls.container} onSubmit={signIn}>
+    <Form className={cls.container} onSubmit={signUp}>
+      <div className={cls.header}>
+        <img src={Logo} alt={'really good massages logo'} />
+        <p className={cls.title}>Sign Up</p>
+      </div>
+
+      <Form.Group controlId='formBasicName'>
+        <Form.Control required type='text' placeholder='Name' name='name' />
+      </Form.Group>
+
       <Form.Group controlId='formBasicEmail'>
-        <div className={cls.header}>
-          <img src={Logo} alt={'really good massages logo'} />
-          <p className={cls.title}>Sign Up</p>
-        </div>
         <Form.Control required type='email' placeholder='Email' name='email' />
         <Form.Text className='text-muted'>
           We'll never share your email with anyone else.

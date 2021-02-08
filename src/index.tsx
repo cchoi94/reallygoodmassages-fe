@@ -5,6 +5,10 @@ import App from './app/App';
 import { Provider } from 'react-redux';
 import store from './app/redux/store';
 import * as serviceWorker from './serviceWorker';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
 
 ReactDOM.render(
   <React.StrictMode>

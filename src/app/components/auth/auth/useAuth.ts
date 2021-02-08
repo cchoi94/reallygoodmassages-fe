@@ -3,29 +3,21 @@ import { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getFormValues } from 'app/utils/getFormValues';
 import { Path } from 'app/Path';
+import { useQuery } from 'app/utils/useQuery';
 // import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
 // import { Hub } from 'aws-amplify';
-
-interface Signup {
-  email: string;
-  password: string;
-  name: string;
-}
 
 interface Confirmation {
   username: string;
   code: string;
 }
 
-interface Signin {
-  username: string;
-  password: string;
-}
-
 export const useAuth = () => {
   const [user, setUser] = useState<object | undefined>();
   const { authStage } = useParams();
   const history = useHistory();
+  const query = useQuery();
+  let [resendCooldown, setResendCooldown] = useState<number>(0);
 
   useEffect(() => {
     (async function() {
@@ -33,13 +25,29 @@ export const useAuth = () => {
     })();
   }, []);
 
-  const getUser = async () => {
-    const user = await Auth.currentAuthenticatedUser();
-    console.log(user);
-    setUser(user);
+  const handleResendCoolDown = (seconds: number) => {
+    resendCooldown = seconds;
+    setInterval(() => {
+      if (resendCooldown < 0) {
+        clearInterval();
+        return;
+      }
+      setResendCooldown(resendCooldown--);
+    }, 1000);
   };
 
-  const signUp = async ({ email, password, name }: Signup) => {
+  const getUser = async () => {
+    try {
+      const user = await Auth.currentAuthenticatedUser();
+      setUser(user);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const signUp = async (event: any) => {
+    event.preventDefault();
+    const { name, email, password } = getFormValues(event.target);
     try {
       const { user } = await Auth.signUp({
         username: email,
@@ -48,18 +56,21 @@ export const useAuth = () => {
           name,
         },
       });
-      console.log(user);
+      setUser(user);
+      history.push(Path.CONFIRMSIGNUP);
     } catch (error) {
       console.log('error signing up:', error);
     }
   };
 
-  const confirmSignUp = async ({ username, code }: Confirmation) => {
-    try {
-      await Auth.confirmSignUp(username, code);
-    } catch (error) {
-      console.log('error confirming sign up', error);
-    }
+  const confirmSignUp = async (event: any) => {
+    const { email, code } = getFormValues(event.target);
+    console.log(email, code);
+    // try {
+    //   await Auth.confirmSignUp(email, code);
+    // } catch (error) {
+    //   console.log('error confirming sign up', error);
+    // }
   };
 
   const signIn = async (event: any) => {
@@ -71,13 +82,17 @@ export const useAuth = () => {
       history.push(Path.HOME);
       setTimeout(() => window.location.reload(), 100);
     } catch (error) {
+      if (error.code === 'UserNotConfirmedException') {
+        history.push(`${Path.CONFIRMSIGNUP}?email=${email}`);
+      }
       console.log('error signing in', error);
     }
   };
 
   const resendConfirmationCode = async (username: string) => {
     try {
-      await Auth.resendSignUp(username);
+      // await Auth.resendSignUp(username);
+      handleResendCoolDown(3);
       console.log('code resent successfully');
     } catch (err) {
       console.log('error resending code: ', err);
@@ -101,5 +116,7 @@ export const useAuth = () => {
     confirmSignUp,
     resendConfirmationCode,
     authStage,
+    query,
+    resendCooldown,
   };
 };

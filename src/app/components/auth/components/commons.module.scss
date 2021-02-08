@@ -10,6 +10,7 @@ $gutter: 8px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
+  max-width: 480px;
   border: 4px solid $blue;
   padding: $gutter * 6 $gutter * 4 $gutter * 8;
   border-radius: 25px;
@@ -30,5 +31,9 @@ $gutter: 8px;
 }
 
 .submitBtn {
+  margin: $gutter * 2 0;
+}
+
+.formSection {
   margin: $gutter * 2 0;
 }
