@@ -52,7 +52,7 @@ export const Therapy: React.FC = () => {
             </div>
           </div>
         </div>
-        <SideDescription toolTipTitle={'Message Tips & Tricks'}>
+        <SideDescription toolTipTitle={'Massage Tips & Tricks'}>
           <div className={'infoBox'}>
             <div className={'title'}>
               <p>Massage Guidlines</p>

@@ -8,12 +8,12 @@ $transition: all 300ms ease-in-out;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $black;
 }
 
 body {
   font-family: 'Lora', serif !important;
   font-weight: 400;
+  color: $black;
   p,
   li,
   input,

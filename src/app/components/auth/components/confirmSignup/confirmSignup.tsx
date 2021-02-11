@@ -55,19 +55,18 @@ export const ConfirmSignup: React.FC = () => {
       >
         Submit
       </Button>
-      <div>
+      <div className={cls.resendCodeContainer}>
         <Button
           variant='link'
           disabled={resendCooldown !== 0}
           onClick={() => resendConfirmationCode(getEmailQuery(query))}
         >
-          Resend Code
+          {resendCooldown !== 0 ? (
+            <p>Resend code in {resendCooldown} </p>
+          ) : (
+            <p>Resend Code</p>
+          )}
         </Button>
-        {resendCooldown !== 0 ? (
-          <p>Resend code in {resendCooldown} </p>
-        ) : (
-          <React.Fragment />
-        )}
       </div>
     </Form>
   );

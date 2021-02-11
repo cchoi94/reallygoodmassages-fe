@@ -1,49 +1,41 @@
 import { Auth } from 'aws-amplify';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getFormValues } from 'app/utils/getFormValues';
 import { Path } from 'app/Path';
 import { useQuery } from 'app/utils/useQuery';
-// import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
-// import { Hub } from 'aws-amplify';
+import { toast } from 'react-toastify';
+import { getUserInfo } from 'app/redux/actions/userAction';
+import { useDispatch } from 'react-redux';
 
-interface Confirmation {
-  username: string;
-  code: string;
-}
+export const getToken = async () => {
+  const tokens = await Auth.currentSession();
+  return tokens.getIdToken().getJwtToken();
+};
 
 export const useAuth = () => {
   const [user, setUser] = useState<object | undefined>();
   const { authStage } = useParams();
   const history = useHistory();
   const query = useQuery();
+  const dispatch = useDispatch();
   let [resendCooldown, setResendCooldown] = useState<number>(0);
+
+  const getUser = useCallback(async () => {
+    try {
+      const user = await Auth.currentAuthenticatedUser();
+      setUser(user);
+      dispatch(getUserInfo({ cognitoId: user.username }));
+    } catch (err) {
+      console.log(err);
+    }
+  }, [dispatch]);
 
   useEffect(() => {
     (async function() {
       await getUser();
     })();
-  }, []);
-
-  const handleResendCoolDown = (seconds: number) => {
-    resendCooldown = seconds;
-    setInterval(() => {
-      if (resendCooldown < 0) {
-        clearInterval();
-        return;
-      }
-      setResendCooldown(resendCooldown--);
-    }, 1000);
-  };
-
-  const getUser = async () => {
-    try {
-      const user = await Auth.currentAuthenticatedUser();
-      setUser(user);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  }, [getUser]);
 
   const signUp = async (event: any) => {
     event.preventDefault();
@@ -64,13 +56,23 @@ export const useAuth = () => {
   };
 
   const confirmSignUp = async (event: any) => {
+    event.preventDefault();
     const { email, code } = getFormValues(event.target);
-    console.log(email, code);
-    // try {
-    //   await Auth.confirmSignUp(email, code);
-    // } catch (error) {
-    //   console.log('error confirming sign up', error);
-    // }
+    try {
+      await Auth.confirmSignUp(email, code);
+      toast.success('👍 Email Confirmed, begin by logging in!', {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      history.push(Path.SIGNIN);
+    } catch (error) {
+      console.log('error confirming sign up', error);
+    }
   };
 
   const signIn = async (event: any) => {
@@ -84,6 +86,26 @@ export const useAuth = () => {
     } catch (error) {
       if (error.code === 'UserNotConfirmedException') {
         history.push(`${Path.CONFIRMSIGNUP}?email=${email}`);
+        toast.info('✉️ Please confirm your email', {
+          position: 'bottom-right',
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      if (error.code === 'UserNotFoundException') {
+        toast.error('😐 There is no account for this email', {
+          position: 'bottom-right',
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
       console.log('error signing in', error);
     }
@@ -91,9 +113,17 @@ export const useAuth = () => {
 
   const resendConfirmationCode = async (username: string) => {
     try {
-      // await Auth.resendSignUp(username);
-      handleResendCoolDown(3);
-      console.log('code resent successfully');
+      await Auth.resendSignUp(username);
+      handleResendCoolDown(60);
+      toast.success('✉️ Verification has been code sent!', {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (err) {
       console.log('error resending code: ', err);
     }
@@ -106,6 +136,17 @@ export const useAuth = () => {
     } catch (error) {
       console.log('error signing out: ', error);
     }
+  };
+
+  const handleResendCoolDown = (seconds: number) => {
+    resendCooldown = seconds;
+    setInterval(() => {
+      if (resendCooldown < 0) {
+        clearInterval();
+        return;
+      }
+      setResendCooldown(resendCooldown--);
+    }, 1000);
   };
 
   return {

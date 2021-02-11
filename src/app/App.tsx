@@ -4,6 +4,8 @@ import Routes from './routes/Routes';
 import { NavBar } from 'app/components/navbar/navBar';
 import { ExitIntentModal } from 'app/components/commons/exitIntent/exitIntentModal/exitIntentModal';
 import { UserPanel } from 'app/components/userPanel/userPanel';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './App.module.scss';
 
@@ -15,6 +17,17 @@ function App() {
         <NavBar />
         <Routes />
         <UserPanel />
+        <ToastContainer
+          position='bottom-right'
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </Router>
     </div>
   );

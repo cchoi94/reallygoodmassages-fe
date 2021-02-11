@@ -37,3 +37,8 @@ $gutter: 8px;
 .formSection {
   margin: $gutter * 2 0;
 }
+
+.resendCodeContainer {
+  display: flex;
+  align-items: center;
+}
