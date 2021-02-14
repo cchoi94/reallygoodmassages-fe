@@ -11,22 +11,25 @@ $transition: all 300ms ease-in-out;
 }
 
 body {
-  font-family: 'Lora', serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
   font-weight: 400;
   color: $black;
   p,
   li,
   input,
   a {
-    font-family: 'Source Sans Pro', sans-serif !important;
     text-decoration: none;
     margin: 0;
   }
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 // Basic section page
+
+:global(.App) {
+  overflow-x: hidden;
+  position: relative;
+}
 
 :global(.section) {
   padding: 100px 40px 0 40px;
@@ -112,6 +115,10 @@ body {
   font-size: $gutter * 4;
   padding: $gutter * 5 0 $gutter * 2 0;
   font-weight: 700;
+}
+
+:global(.swal2) {
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 @media (max-width: 1265px) {

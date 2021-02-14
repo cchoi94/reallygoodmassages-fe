@@ -7,11 +7,19 @@ import { SideDescription } from 'app/components/commons/sideDescription/sideDesc
 import SupportedFingerTech from 'app/assets/images/handTechniques/supportedFingerTech.svg';
 import SupportedHandTech from 'app/assets/images/handTechniques/supportedHandTech.svg';
 import SupportedThumbTech from 'app/assets/images/handTechniques/supportedThumbTech.svg';
+import BlankStarIcon from 'app/assets/images/icons/blankStar.png';
+import FilledStarIcon from 'app/assets/images/icons/filledStar.png';
 
 import cls from './therapy.module.scss';
 
 export const Therapy: React.FC = () => {
-  const { exerciseList, selectedExercise, setSelectedExercise } = useTherapy();
+  const {
+    exerciseList,
+    selectedExercise,
+    setSelectedExercise,
+    favoriteMassage,
+    isFavorited,
+  } = useTherapy();
   return (
     <div className={'section'}>
       <div id='wrapper' className={'wrapper'}>
@@ -51,6 +59,13 @@ export const Therapy: React.FC = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className={cls.star} onClick={favoriteMassage}>
+          {isFavorited ? (
+            <img src={FilledStarIcon} alt='filled star icon' />
+          ) : (
+            <img src={BlankStarIcon} alt='blank star icon' />
+          )}
         </div>
         <SideDescription toolTipTitle={'Massage Tips & Tricks'}>
           <div className={'infoBox'}>

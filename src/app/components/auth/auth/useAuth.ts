@@ -5,8 +5,9 @@ import { getFormValues } from 'app/utils/getFormValues';
 import { Path } from 'app/Path';
 import { useQuery } from 'app/utils/useQuery';
 import { toast } from 'react-toastify';
-import { getUserInfo } from 'app/redux/actions/userAction';
+import { getUserInfo, createUser } from 'app/redux/actions/userAction';
 import { useDispatch } from 'react-redux';
+import { CognitoUser } from '@aws-amplify/auth';
 
 export const getToken = async () => {
   const tokens = await Auth.currentSession();
@@ -14,7 +15,7 @@ export const getToken = async () => {
 };
 
 export const useAuth = () => {
-  const [user, setUser] = useState<object | undefined>();
+  const [user, setUser] = useState<CognitoUser>();
   const { authStage } = useParams();
   const history = useHistory();
   const query = useQuery();
@@ -25,7 +26,7 @@ export const useAuth = () => {
     try {
       const user = await Auth.currentAuthenticatedUser();
       setUser(user);
-      dispatch(getUserInfo({ cognitoId: user.username }));
+      dispatch(getUserInfo(user.attributes.sub));
     } catch (err) {
       console.log(err);
     }
@@ -49,7 +50,7 @@ export const useAuth = () => {
         },
       });
       setUser(user);
-      history.push(Path.CONFIRMSIGNUP);
+      history.push(`${Path.CONFIRMSIGNUP}?email=${email}`);
     } catch (error) {
       console.log('error signing up:', error);
     }
@@ -78,9 +79,12 @@ export const useAuth = () => {
   const signIn = async (event: any) => {
     event.preventDefault();
     const { email, password } = getFormValues(event.target);
+
     try {
       const user = await Auth.signIn(email, password);
+      const { sub: cognitoId, name: username } = user.attributes;
       setUser(user);
+      dispatch(createUser({ cognitoId, username, email }));
       history.push(Path.HOME);
       setTimeout(() => window.location.reload(), 100);
     } catch (error) {

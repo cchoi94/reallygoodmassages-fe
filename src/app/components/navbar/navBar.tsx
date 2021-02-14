@@ -10,6 +10,8 @@ import LogoIcon from 'app/assets/images/icons/logo.svg';
 import InstagramIcon from 'app/assets/images/icons/instagram.svg';
 import FacebookIcon from 'app/assets/images/icons/facebook.png';
 import TwitterIcon from 'app/assets/images/icons/twitter.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from 'app/redux/rootReducer';
 
 import cls from './navBar.module.scss';
 

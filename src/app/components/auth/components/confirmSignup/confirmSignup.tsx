@@ -35,7 +35,7 @@ export const ConfirmSignup: React.FC = () => {
           type='email'
           placeholder='Email'
           name='email'
-          value={getEmailQuery(query)}
+          defaultValue={getEmailQuery(query)}
         />
       </Form.Group>
 

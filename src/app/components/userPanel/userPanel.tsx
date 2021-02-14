@@ -23,7 +23,7 @@ export const UserPanel: React.FC = () => {
           <span role='img' aria-label='wave emoji'>
             👋
           </span>{' '}
-          {capitalize(username)}!
+          {username ? capitalize(username)! : 'Sign in to start!'}
         </h1>
       </div>
       <FavoriteMassages

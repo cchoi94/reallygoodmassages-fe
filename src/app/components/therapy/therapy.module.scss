@@ -1,6 +1,7 @@
 @import '../../dictionaries/themes/colors.module.scss';
 
 $gutter: 8px;
+$transition: all 300ms ease-in-out;
 
 .header {
   font-family: Lora;
@@ -75,6 +76,17 @@ $gutter: 8px;
   align-items: center;
   text-align: center;
   margin-right: $gutter * 2;
+}
+
+.star {
+  position: absolute;
+  right: 80px;
+  top: 7px;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    transform: scale(1.3) rotate(45deg);
+  }
 }
 
 @media (max-width: 1024px) {

@@ -1,13 +1,18 @@
 import { Dispatch } from 'redux';
-import { UserActions } from 'app/redux/reducers/userReducer';
+import { UserActions, UserReducerState } from 'app/redux/reducers/userReducer';
 import axios from 'app/requests/axiosInstance';
 import { Thunk } from '../reduxUtils';
 
-export const getUserInfo: Thunk = ({
-  cognitoId,
-}: {
-  cognitoId: string;
-}) => async (dispatch: Dispatch, getState: any) => {
+interface CognitoUserAttr {
+  sub: string;
+  name: string;
+  email: string;
+}
+
+export const getUserInfo: Thunk = (cognitoId: CognitoUserAttr) => async (
+  dispatch: Dispatch,
+  getState: any
+) => {
   try {
     const { data } = await axios.get(`/users/${cognitoId}`);
     dispatch({
@@ -19,15 +24,33 @@ export const getUserInfo: Thunk = ({
   }
 };
 
-export const getUsersEmail: Thunk = () => async (
+export const createUser: Thunk = (userInfo: CognitoUserAttr) => async (
   dispatch: Dispatch,
   getState: any
 ) => {
-  const email = await Promise.resolve('testemail@gmail.com');
   try {
+    const createdUser = await axios.post(`/users`, userInfo);
     dispatch({
-      type: UserActions.GET_USER_EMAIL,
-      email,
+      type: UserActions.SET_USER_INFO,
+      ...createdUser,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const updateUserInfo: Thunk = (newUserState: UserReducerState) => async (
+  dispatch: Dispatch,
+  getState: any
+) => {
+  const {
+    user: { cognitoId },
+  } = getState();
+  try {
+    const updatedUserInfo = await axios.put(`users/${cognitoId}`, newUserState);
+    dispatch({
+      type: UserActions.SET_USER_INFO,
+      ...updatedUserInfo,
     });
   } catch (err) {
     console.log(err);

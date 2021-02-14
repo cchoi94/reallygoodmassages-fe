@@ -10,9 +10,9 @@ $transition: all 300ms ease-in-out;
   padding: $gutter;
   position: absolute;
   top: 0;
-  right: -40vw;
+  right: -40%;
   height: 85vh;
-  width: 40vw;
+  width: 40%;
   background: #ffffff;
   margin-top: 108px;
   transition: $transition;
@@ -48,4 +48,38 @@ $transition: all 300ms ease-in-out;
 }
 
 .userName {
+  color: $blue;
+  font-weight: 700;
+}
+
+.sectionContainer {
+  a:hover {
+    text-decoration: none;
+  }
+  .cardHeader {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gutter * 3;
+    border: none;
+    color: $blue;
+    &:focus {
+      outline: none;
+    }
+    p {
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 80%;
+    right: -80%;
+  }
+  .open {
+    right: 0;
+  }
 }

@@ -1,5 +1,3 @@
-import produce from 'immer';
-
 import {
   createReducer,
   handleSimpleReducerUpdates,
@@ -9,17 +7,19 @@ import {
 export enum UserActions {
   GET_USER_INFO = 'GET_USER_INFO',
   SET_USER_INFO = 'SET_USER_INFO',
-  GET_USER_EMAIL = 'GET_USER_EMAIL',
+  UPDATE_USER_INFO = 'UPDATE_USER_INFO',
 }
 
 export interface UserReducerState {
   id: string;
+  cognitoId: string;
   email: string;
   username: string;
-  favoriteMassages: string[];
+  favoriteMassages: [];
 }
 export const userInitialState: UserReducerState = {
   id: '',
+  cognitoId: '',
   email: '',
   username: '',
   favoriteMassages: [],
@@ -30,10 +30,6 @@ const reducers: ReducerDictionary<UserReducerState> = {
     UserActions.GET_USER_INFO,
     UserActions.SET_USER_INFO,
   ]),
-  [UserActions.GET_USER_EMAIL]: (state, { email }) =>
-    produce(state, draftState => {
-      draftState.email = email;
-    }),
 };
 export const userReducer = createReducer<UserReducerState>(
   userInitialState,
