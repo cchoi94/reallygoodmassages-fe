@@ -29,7 +29,7 @@ export const AuthWrapper: React.FC<OwnProps> = ({
     <Link
       onClick={wasSigninClicked ? () => wasSigninClicked(false) : () => {}}
       to={Path.SIGNIN}
-      className={classNames('btn btn-primary')}
+      className={classNames('btn btn-primary', cls.signIn)}
     >
       Sign In
     </Link>

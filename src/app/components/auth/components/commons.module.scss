@@ -42,3 +42,9 @@ $gutter: 8px;
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 420px) {
+  .container {
+    width: 90%;
+  }
+}

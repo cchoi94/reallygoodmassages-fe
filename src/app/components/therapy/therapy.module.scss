@@ -80,8 +80,8 @@ $transition: all 300ms ease-in-out;
 
 .star {
   position: absolute;
-  right: 80px;
-  top: 7px;
+  right: 19%;
+  top: 16px;
   cursor: pointer;
   transition: $transition;
   &:hover {
@@ -92,6 +92,10 @@ $transition: all 300ms ease-in-out;
 @media (max-width: 1024px) {
   .handTechniquesContainer {
     justify-content: flex-start;
+  }
+  .star {
+    right: 10%;
+    top: 7px;
   }
 }
 
@@ -107,5 +111,9 @@ $transition: all 300ms ease-in-out;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+  }
+  .star {
+    right: 20px;
+    top: 60px;
   }
 }
